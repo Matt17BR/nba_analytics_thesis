@@ -1,0 +1,14 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces 3-point field goals over total field goals between 2003 and 2022\relax }}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {2}{\ignorespaces League-wide expected shooting efficiency between 2003 and 2022\relax }}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Golden State Warriors shooting charts in 2003-04 and 2015-16\relax }}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Houston Rockets shooting charts in 2003-04 and 2017-18\relax }}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Role of shot precision in games predictions\relax }}{10}{figure.caption.12}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shot precision relationship with game results}}}{10}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {3PT precision relationship with game results}}}{10}{subfigure.5.2}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Decision tree plot for model with all variables included\relax }}{14}{figure.caption.15}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Variable Importance plot for model with all variables included\relax }}{15}{figure.caption.17}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Decision tree plot for model without shooting variables\relax }}{16}{figure.caption.18}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Variable Importance plot for model without shooting variables\relax }}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Regression coefficients plot for 10-fold full model cross-validation\relax }}{17}{figure.caption.20}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Comparison of model metrics for 4 different models\relax }}{18}{figure.caption.21}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Comparison of ROC curves for 4 different models\relax }}{19}{figure.caption.22}%

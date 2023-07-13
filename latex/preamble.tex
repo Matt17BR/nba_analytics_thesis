@@ -1,0 +1,30 @@
+% table of contents options
+\usepackage[notlof,notlot]{tocbibind}
+
+% for times new roman
+\usepackage{newtxtext, newtxmath}
+
+% control figures float
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+% control headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyhead[L]{{Predictive Modeling of NBA Game Outcomes}}
+\fancyfoot[C]{{\thepage}}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+% \setlength\footskip{15.5pt}
+% \setlength\headheight{14.5pt}
+
+% suppress default maketitle in favor of titlepage
+\AtBeginDocument{\let\maketitle\relax}

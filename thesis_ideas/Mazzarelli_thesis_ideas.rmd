@@ -1,0 +1,320 @@
+---
+title: "**Initial ideas for thesis on NBA data analysis**"
+subtitle: "Visualizing and modeling the evolution of the NBA over the past 20 seasons"
+author: "Matteo Mazzarelli"
+date: "`r format(Sys.time(), '3 June %Y')`"
+papersize: a4
+geometry: margin=2.5cm
+colorlinks: true
+output: 
+  bookdown::pdf_book:
+    toc: yes
+    number_sections: true
+    includes:
+        in_header: preamble.tex
+bibliography: references.bib
+csl: apa.csl
+nocite: |
+  @RTidyverse, @RTidymodels, @RCaret
+---
+
+```{r setup, include=FALSE}
+# Setup options for R Markdown
+library(bookdown)    # use bookdown to produce the report
+library(tidyverse)   # loads amongst others dplyr, tidyr and ggplot2
+library(knitr)       # provides the kable function & chunk options
+library(kableExtra)  # provides kable_styling for kable settings
+library(tidymodels)  # loads several packages useful for model testing
+library(caret)       # provides functions useful for model fitting
+library(nbapalettes) # adds palettes based on nba teams colors
+
+opts_chunk$set(
+  echo       = TRUE,     # Print code
+  warning    = FALSE,    # Suppress warnings
+  message    = FALSE,    # Suppress messages
+  fig.align  = "center"  # Center figures
+)
+
+# Set options
+options(
+  digits = 3, # limit the number of significant digits
+  width  = 63 # limit the width of code output
+)
+```
+
+# Introduction
+
+The ideas that I have currently explored for my thesis concern the data analysis of NBA games, with the goal of gaining insights into the factors that influence teams' performance and success. The analysis examines the relationship between shot characteristics, such as shot type and location, and the probability of scoring. Additionally, I investigated the predictive power of shooting precision, particularly in the context of three-point field goals, and its impact on a team's chances of winning.
+
+In order to draw in R an accurate NBA basketball court figure, I have made use of code provided on the internet [@BasketballCourtR] I have subsequently adapted.
+
+```{r}
+source("other/bb_court.R")
+```
+
+# Data sources
+
+The National Basketball Association (NBA) makes public a really flexible and easily accessible API that allows us to track its evolution. The data has all been sourced, in a way or another, from the official NBA statistics source [@NBAStats]. On public sources such as Kaggle and Github, some of the data is already compiled by private individuals and readily accessible. From Github, I have sourced a dataset containing shot coordinates as well as other data for the last 20 seasons [@GithubNBAShots]. From Kaggle, I have sourced a dataset containing further data on NBA games for the last 20 seasons [@KaggleNBAGames].
+
+```{r}
+shots <- read_csv("dataset/nbashots0423/NBA_2004_2023_Shots.csv")
+
+# glimpse(shots)
+
+games_details   <- read_csv("dataset/nbagames/games_details.csv")
+games           <- read_csv("dataset/nbagames/games.csv")
+
+# glimpse(games)
+# glimpse(games_details)
+```
+
+# Data wrangling
+
+I have prepared the datasets in order for them to be easier to analyze for me. Most of the modifications to the original data have to do with modifying team abbreviations from teams that have changed names to the currently used abbreviations, since this was creating a few inconsistencies in the analysis.
+
+```{r}
+shots %<>%
+  unite(TIME_LEFT, c(MINS_LEFT,SECS_LEFT), sep = ":") %>%
+  select(-SEASON_1, -EVENT_TYPE, -POSITION_GROUP, -ZONE_ABB) %>%
+  mutate(TEAM_ID    = str_sub(TEAM_ID, -2)     %>% as.numeric(),
+         SHOT_TYPE  = str_sub(SHOT_TYPE, 1, 1) %>% as.numeric(),
+         HOME_TEAM  = case_when(
+         HOME_TEAM %in% c("NOH", "NOK") ~ "NOP",
+         HOME_TEAM == "NJN" ~ "BKN",
+         HOME_TEAM == "SEA" ~ "OKC",
+         TRUE ~ HOME_TEAM),
+         AWAY_TEAM  = case_when(
+         AWAY_TEAM %in% c("NOH", "NOK") ~ "NOP",
+         AWAY_TEAM == "NJN" ~ "BKN",
+         AWAY_TEAM == "SEA" ~ "OKC",
+         TRUE ~ AWAY_TEAM))
+
+games_details %<>%
+  select(-(PLAYER_ID:MIN)) %>%
+  mutate(TEAM_ID = str_sub(TEAM_ID, -2) %>% as.numeric(),
+         across(everything(),~replace_na(.,0)),
+         TEAM_ABBREVIATION = case_when(
+         TEAM_ABBREVIATION %in% c("NOH", "NOK") ~ "NOP",
+         TEAM_ABBREVIATION == "NJN" ~ "BKN",
+         TEAM_ABBREVIATION == "SEA" ~ "OKC",
+         TRUE ~ TEAM_ABBREVIATION)) %>%
+  left_join(games[,c("GAME_ID","SEASON")],
+            by="GAME_ID",multiple="first")
+```
+
+# Data analysis and visualization
+
+In this first plot below, I show the evolution of the prevalence of 3PT field goals compared to regular 2PT shots. We can see 3PT shots doubling over the past 20 seasons.
+
+```{r}
+shots %>%
+  unite(SHOT_INFO, c(SHOT_TYPE,SHOT_MADE)) %>% 
+  group_by(SEASON_2, SHOT_INFO) %>%
+  summarize(COUNT = n()) %>%
+  mutate(RATIO_3 = COUNT / sum(COUNT)) %>%
+  filter(grepl("3",SHOT_INFO)) %>%
+  mutate(SHOT_INFO=if_else(grepl("TRUE",SHOT_INFO),"Made","Missed")) %>%
+  ggplot(aes(SEASON_2, RATIO_3,
+          fill = SHOT_INFO, label = label_percent(0.1)(RATIO_3))) +
+  geom_col(position = "stack") +
+  geom_text(position = "stack", col = "white", vjust = 2) +
+  labs(x="Season",y="3PT Field Goals to Total FGs",fill="Shot Result",
+        title="3-point field goals in the NBA over the past 20 seasons",
+        subtitle="3-point Field Goals over total FG between 2003 and 2023") +
+  scale_y_continuous(labels = label_percent()) +
+  scale_fill_brewer(palette = "Set1", direction = -1)
+```
+
+In this second plot, I show how one of the most successful teams of the past seasons, the Golden State Warriors, takes their shots during the current season and how they used to take them 20 seasons ago.
+
+```{r}
+C_half + shots %>%
+  mutate(SHOT_MADE=if_else(grepl("TRUE",SHOT_MADE),"Made","Missed")) %>%
+  filter(LOC_Y <= 47 & TEAM_ID == 44 &
+         (SEASON_2 == "2003-04" | SEASON_2 == "2022-23")) %>%
+  geom_point(aes(LOC_X,LOC_Y,col=SHOT_MADE),.,,alpha=0.3) +
+  scale_color_manual(values = nba_palette("warriors")) +
+  facet_grid(~SEASON_2) +
+  labs(title = "Golden State Warriors shooting",
+       subtitle = "Shot charts in 2003-2004 vs. 2022-2023",
+       color = "Shot result")
+```
+
+The NBA shots dataset provides a few macro-areas (coded as `BASIC_ZONE`), from which each shot has been attempted. We wil calculate total shots made and attempted in each area of the field and calculate the probability of a shot being made in each area. Finally, we compute the expected value of a shot in each area (coded as `EV`).
+
+```{r}
+EV_info <- shots %>%
+  filter(SHOT_MADE) %>%
+  count(BASIC_ZONE, SHOT_TYPE, name = "TOT_MADE") %>%
+  left_join(count(shots, BASIC_ZONE, SHOT_TYPE, name = "ATTEMPTS")) %>%
+  mutate(PROB = TOT_MADE/ATTEMPTS, EV = PROB*SHOT_TYPE) %>%
+  group_by(BASIC_ZONE) %>%
+  filter(ATTEMPTS == max(ATTEMPTS)) %>%
+  arrange(desc(EV)) %>%
+  select(BASIC_ZONE,EV)
+
+kable(EV_info)
+```
+
+I then plot how the same team as before has increased how many shots they take in favorable areas in term of `EV` of their shots.
+
+```{r}
+C_half + shots %>%
+  filter(LOC_Y <= 47 & TEAM_ID == 44 &
+         (SEASON_2 == "2003-04" | SEASON_2 == "2022-23")) %>%
+  left_join(EV_info) %>%
+  geom_point(aes(LOC_X,LOC_Y,col=EV,shape=BASIC_ZONE),.,,alpha=0.3) +
+  scale_color_gradient(low="#d7b81f",high="#de2d26") +
+  facet_grid(~SEASON_2) +
+  labs(title = "Golden State Warriors shooting",
+       subtitle = "Shot charts in 2003-2004 vs. 2022-2023",
+       color = "Shot expected value",
+       shape = "Shot area")
+```
+
+In the following table, I determine the expected and actual win percentages for teams based on the `EV` statistic. The resulting dataset summarizes team win percentages across a single season based on this sole predictor. As we can see from a portion of this data, the predictor on its own is not extremely accurate.
+
+```{r}
+teams_percentages <- shots %>%
+  left_join(EV_info) %>%
+  group_by(GAME_ID,SEASON_2,TEAM_ID) %>%
+  summarize(TOTAL_EV = sum(EV)) %>%
+  mutate(EXP_RESULT=if_else(TOTAL_EV==max(TOTAL_EV),"Win","Loss")) %>%
+  inner_join(games_details %>%
+    group_by(GAME_ID,TEAM_ID) %>%
+    summarize(PTS=sum(PTS)) %>%
+    mutate(WIN_REAL=if_else(PTS==max(PTS),"Win","Loss"))) %>%
+  mutate(MOD_FLAG=if_else(EXP_RESULT==WIN_REAL,TRUE,FALSE)) %>%
+  group_by(SEASON_2,TEAM_ID) %>%
+  summarize(MODEL_PCT = mean(EXP_RESULT == "Win"),
+            REAL_PCT  = mean(WIN_REAL   == "Win")) %>%
+  arrange(desc(REAL_PCT))
+
+kable(head(teams_percentages))
+```
+
+What we notice from the plot below is that field goal percentages are likely the best predictor for a game's result.
+
+```{r, fig.show="hold", out.width="45%"}
+games_details %>%
+  group_by(GAME_ID,TEAM_ABBREVIATION) %>%
+  summarize(FGA=sum(FGA), FGM=sum(FGM),
+            PTS=sum(PTS)) %>%
+  mutate(WIN=if_else(PTS==max(PTS),"Win","Loss")) %>%
+  filter(FGA!=0) %>%
+  ggplot(aes(FGA,FGM/FGA,col=WIN)) +
+  geom_point() +
+  labs(x="Field Goals Attempts",y="Shot Percentage",col="Game Result",
+      title="Shot precision reliably predicts wins",
+      subtitle="Shots volume and precision, and game result") +
+  scale_y_continuous(labels = label_percent()) +
+  scale_color_brewer(palette = "Set2", direction = -1)
+
+games_details %>%
+  group_by(GAME_ID,TEAM_ABBREVIATION) %>%
+  summarize(FG3A=sum(FG3A), FG3M=sum(FG3M),
+            PTS=sum(PTS)) %>%
+  mutate(WIN=if_else(PTS==max(PTS),"Win","Loss")) %>%
+  filter(FG3A!=0) %>%
+  ggplot(aes(FG3A,FG3M/FG3A,col=WIN)) +
+  geom_point() +
+  labs(x="3PT Field Goals Attempts",y="3PT Percentage",col="Game Result",
+      title="3PT shooting precision reliably predicts wins",
+      subtitle="3-point shots volume and precision, and game result") +
+  scale_y_continuous(labels = label_percent()) +
+  scale_color_brewer(palette = "Set2", direction = -1)
+```
+
+# Prediction and modeling
+
+We then prepare a dataset useful for modeling and prediction, since we want to check how adding these variables into the model affects prediction quality:
+
+```{r}
+model_ds <- shots %>%
+  left_join(distinct(games_details %>% select(TEAM_ID, TEAM_ABBREVIATION))) %>%
+  left_join(EV_info) %>%
+  group_by(GAME_ID, SEASON_2) %>%
+  summarize(EV_home = sum(EV * (HOME_TEAM == TEAM_ABBREVIATION)),
+            EV_away = sum(EV * (AWAY_TEAM == TEAM_ABBREVIATION)),
+            .groups = "drop") %>%
+  inner_join(games) %>%
+  select(-GAME_DATE_EST, -GAME_ID, -GAME_STATUS_TEXT,
+         -HOME_TEAM_ID, -VISITOR_TEAM_ID, -SEASON, -TEAM_ID_home,
+         -TEAM_ID_away, -PTS_home, -PTS_away, -SEASON_2) %>%
+  mutate(HOME_TEAM_WINS = as.factor(HOME_TEAM_WINS)) %>%
+  rename(WIN_home = HOME_TEAM_WINS)
+```
+
+We split the data into a training set and a testing set:
+
+```{r}
+set.seed(123)
+trainIndex <- createDataPartition(model_ds$WIN_home, p = .8, 
+                                  list = FALSE, 
+                                  times = 1)
+train_ds <- model_ds[ trainIndex,]
+test_ds  <- model_ds[-trainIndex,]
+```
+
+Now we train different models based on different partitions of the explanatory variables: one with all variables, one with no `EV` statistics, one with no `FG` statistics, and one with neither of them.
+
+```{r}
+model_all       <- train(WIN_home ~ ., 
+                         data = train_ds, 
+                         method = "glm", 
+                         family = "binomial")
+
+model_no_ev     <- train(WIN_home ~ . - EV_home - EV_away, 
+                         data = train_ds, 
+                         method = "glm", 
+                         family = "binomial")
+
+model_no_pct    <- train(WIN_home ~ . - FG_PCT_home - FG3_PCT_home
+                                      - FG_PCT_away - FG3_PCT_away, 
+                         data = train_ds, 
+                         method = "glm", 
+                         family = "binomial")
+
+model_no_pct_ev <- train(WIN_home ~ . - FG_PCT_home - FG3_PCT_home
+                                      - FG_PCT_away - FG3_PCT_away
+                                      - EV_home - EV_away, 
+                         data = train_ds, 
+                         method = "glm", 
+                         family = "binomial")
+```
+
+Now we can generate predictions for our test set and assess the performance of the models:
+
+```{r}
+pred_all        <- predict(model_all,       newdata = test_ds)
+pred_no_ev      <- predict(model_no_ev,     newdata = test_ds)
+pred_no_pct     <- predict(model_no_pct,    newdata = test_ds)
+pred_no_pct_ev  <- predict(model_no_pct_ev, newdata = test_ds)
+
+confusionMatrix(pred_all, test_ds$WIN_home, mode="everything", positive="1")
+# confusionMatrix(pred_no_ev, test_ds$WIN_home, mode="everything", positive="1")
+# confusionMatrix(pred_no_pct, test_ds$WIN_home, mode="everything", positive="1")
+# confusionMatrix(pred_no_pct_ev, test_ds$WIN_home, mode="everything", positive="1")
+```
+
+I perform a likelihood ratio test and compare information criteria:
+
+```{r}
+full_model    <- glm(WIN_home ~ .,                     
+                     data = model_ds, family = binomial())
+reduced_model <- glm(WIN_home ~ . - EV_home - EV_away,
+                     data = model_ds, family = binomial())
+
+anova(reduced_model, full_model, test = "LRT")
+AIC(reduced_model, full_model)
+```
+
+I therefore conclude that adding shots expected value data to the equation can significantly improve a simple model's performance in predicting games outcomes.
+
+# What to do next
+
+What I would like to do over the next few days is possibly implement slightly more advanced machine learning models than logistic regression if I realize that it makes sense, since I would like to make the thesis a bit more statistically sophisticated than what I have simply shown so far, and possibly run some sort of spatial analysis of NBA shots based on court areas (I still do not have a lot of ideas about this). I was also interested in analyzing the so-called "hot hand" effect but I am thinking it might be way outside of the context of what I am doing here and would not know how to link it back to some of the stuff I am working on. I think so far what I have could be used in the final thesis with (obviously) some adapting. Any ideas or comments are quite welcome either by email or possibly by meeting.
+
+# References {-}
+
+<div id="refs"></div>

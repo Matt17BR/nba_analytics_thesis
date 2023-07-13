@@ -1,0 +1,1430 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  12pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+% table of contents options
+\usepackage[notlof,notlot]{tocbibind}
+
+% for times new roman
+\usepackage{newtxtext, newtxmath}
+
+% control figures float
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+% control headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyhead[L]{{Predictive Modeling of NBA Game Outcomes}}
+\fancyfoot[C]{{\thepage}}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+% \setlength\footskip{15.5pt}
+% \setlength\headheight{14.5pt}
+
+% suppress default maketitle in favor of titlepage
+\AtBeginDocument{\let\maketitle\relax}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Predictive Modeling of NBA Game Outcomes},
+  pdfauthor={Matteo Mazzarelli},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{\textbf{Predictive Modeling of NBA Game Outcomes}}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Using shot efficiency as a predictor for basketball game results}
+\author{Matteo Mazzarelli}
+\date{June 2023}
+
+\begin{document}
+\maketitle
+
+\begin{titlepage}
+    \vspace*{1.75cm}
+    \begin{center}
+        \includegraphics{./images/unibo-logo.pdf}
+    \end{center}
+    \vspace{1cm}
+    \begin{center}
+        {\large \textsc{Department of Statistical Sciences ``Paolo Fortunati''}}\\[0.5cm]
+        {\Large \textsc{First Cycle Degree/Bachelor in Statistical Sciences}}\\
+        {\Large \textsc{Curriculum Stats\&Maths}}\\[1cm]
+    \end{center}
+    \vspace{1cm}
+    \begin{center}
+        {\LARGE \textbf{Predictive Modeling of NBA Game Outcomes}}\\[0.5cm]
+        {\Large {Using shot efficiency as a predictor for basketball game results}}\\[1cm]
+    \end{center}
+    \vfill
+    {\large \textbf{Presented by:}}
+    \hfill
+    {\large \textbf{Supervisor:}}\\
+    {\large Matteo Mazzarelli}
+    \hfill
+    {\large Prof. Christian Martin Hennig}\\
+    {\large ID: 0000972122}
+    \vfill
+    \begin{center}
+        {\large{Academic Year 2022/2023\\
+                Session I}\\}
+    \end{center}
+    \vspace*{2.5cm}
+\end{titlepage}
+
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\setstretch{1.25}
+\newpage
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+The National Basketball Association (NBA), the world's most popular basketball league, has experienced a significant transformation in its strategy and play over the past two decades. This shift, mirroring the broader trend in various industries, is a transition towards data-driven decision-making. With the advent and proliferation of advanced analytics, teams are increasingly exploiting these tools to gain a competitive edge. This thesis aims to delve into the specifics of how the NBA's evolution has been influenced by data analytics, with a particular emphasis on the strategic implications of shooting from statistically favorable areas.
+
+The inception of a statistically-driven approach in sports was marked by the application of advanced analytics in baseball, most notably by Billy Beane of the Oakland Athletics. The core idea was to leverage data to identify undervalued players and strategies, subsequently gaining a competitive edge despite budget constraints. This innovative approach, detailed in Michael Lewis's book ``Moneyball''\textsuperscript{{[}\protect\hyperlink{ref-Moneyball}{1}{]}}, transformed not just baseball, but the wider sporting world, setting the stage for similar data-driven revolutions in other sports.
+
+The dawn of the Moneyball era in sports, which highlighted the effectiveness of quantitative analysis in baseball, laid the groundwork for similar applications in basketball. Recent years have seen an exponential increase in the depth and breadth of available basketball-related data, fueling the NBA's analytics revolution. Teams now use these advanced metrics not just for player evaluation and scouting, but also to devise intricate game plans and strategies.
+
+In the realm of basketball, a noteworthy adaptation of the Moneyball concept was championed by Daryl Morey, the former general manager of the Houston Rockets team, and president of basketball operations for the Philadelphia 76ers as of June 2023. Morey's approach, colloquially termed ``Moreyball''\textsuperscript{{[}\protect\hyperlink{ref-Moreyball}{2}{]}}, prioritized efficiency in shot selection based on their expected point value. More specifically, Moreyball emphasizes three-point shots, layups, and free throws, while devaluing mid-range jumpers, a philosophy that fundamentally diverges from traditional basketball strategies.
+
+The success of the Houston Rockets under Morey's stewardship helped cement the value of analytics in basketball strategy. His tenure saw a marked increase in the team's three-point attempt rate, reflecting the strategic shift driven by data analysis. The Rockets' sustained competitive performance further underscored the efficacy of the Moreyball approach.
+
+This study draws inspiration from the principles of both Moneyball and Moreyball, seeking to illuminate the relationship between shot selection efficiency and game outcomes in the NBA. We apply a similar analytical lens to understand the evolution of the league over the past 20 seasons and develop a custom metric to enhance the accuracy of game outcome predictions. While our research is firmly rooted in the NBA, the underlying principle of data-driven decision-making carries potential implications for various sports and competitive endeavors.
+
+Ultimately, the project attempts to quantitatively establish a relationship between a team's propensity to shoot from these statistically favorable areas and their success in winning games. Leveraging the rich datasets that capture detailed game statistics, shot outcomes, and team results, we apply various models to demonstrate the link between effective shooting strategies and team success.
+
+The analysis is performed using the statistical software \texttt{R}, utilizing powerful libraries such as the data manipulation suite \texttt{tidyverse}\textsuperscript{{[}\protect\hyperlink{ref-RTidyverse}{3}{]}} and the modeling tooling collection \texttt{tidymodels}\textsuperscript{{[}\protect\hyperlink{ref-RTidymodels}{4}{]}}. Through meticulous data cleaning, transformation, and exploration, we extract the most meaningful insights and present them in an accessible manner. The models derived in this thesis serve as preliminary steps towards interpreting the complex dynamics that underpin modern NBA strategies.
+
+By the conclusion of this dissertation, readers will hopefully gain a more nuanced perception of the expanding role of analytics in the NBA. Furthermore, they should be equipped with a basic understanding of how data analytics can be used to enhance prediction accuracy in strategic decision-making. The custom metric introduced in this work illustrates this point, contributing to an improvement in game prediction. While this research does not claim to revolutionize sports analytics, it aims to provide a valuable perspective to the broader conversation around how data science techniques can be harnessed to refine our understanding of sports strategies.
+
+Over the next few pages, we will also introduce terminology that may not be immediately clear. Because of this, the appendix contains a glossary illustrating the meaning of the basketball terms used throughout the project (see the \protect\hyperlink{glossary}{basketball glossary} in the appendix).
+
+\hypertarget{data-under-study}{%
+\section{Data under study}\label{data-under-study}}
+
+The data under study for this thesis comprises a wide variety of basketball statistics and information, which has been collated and cleaned up for ease of analysis. The NBA publicly provides a flexible and easily accessible API that allows us to track its evolution. The data has all been sourced, in a way or another, from the official NBA statistics source\textsuperscript{{[}\protect\hyperlink{ref-NBAStats}{5}{]}}. On public sources such as GitHub and Kaggle, some of the data is already compiled by private individuals and readily accessible. From GitHub, we have sourced a dataset containing shot coordinates as well as other data for the last 20 seasons\textsuperscript{{[}\protect\hyperlink{ref-GithubNBAShots}{6}{]}}. From Kaggle, we have sourced two datasets containing further data on NBA games for the last 20 seasons\textsuperscript{{[}\protect\hyperlink{ref-KaggleNBAGames}{7}{]}}, one specifically featuring games statistics grouped on a per-team basis, and one featuring individual statistics for each player in a given game.
+
+\hypertarget{nba-shots-dataset}{%
+\subsection{NBA shots dataset}\label{nba-shots-dataset}}
+
+The extensive dataset containing shot coordinates features details of individual shots taken from NBA games from the 2004 season up until 2023. The data has been preprocessed to ensure its usability, such as by removing unneeded variables, uniting time-related variables, converting specific string variables into numeric ones for brevity, and ensuring no outdated team names or abbreviations are used. The dataset's structure is shown in Table \ref{tab:shotsdesc}.
+
+\begin{table}[H]
+
+\caption{\label{tab:shotsdesc}Summary of the NBA shots dataset}
+\centering
+\begin{tabular}[t]{lll}
+\toprule
+Variable & Type & Description\\
+\midrule
+\cellcolor{gray!30}{SEASON\_2} & \cellcolor{gray!30}{character} & \cellcolor{gray!30}{Season indicator}\\
+TEAM\_ID & numeric & NBA's unique ID variable of the team in their API\\
+\cellcolor{gray!30}{TEAM\_NAME} & \cellcolor{gray!30}{character} & \cellcolor{gray!30}{Name of the team taking the shot}\\
+GAME\_ID & numeric & NBA's unique ID variable of the game in their API\\
+\cellcolor{gray!30}{HOME\_TEAM} & \cellcolor{gray!30}{character} & \cellcolor{gray!30}{Name of the home team in the game}\\
+AWAY\_TEAM & character & Name of the away team in the game\\
+\cellcolor{gray!30}{SHOT\_MADE} & \cellcolor{gray!30}{logical} & \cellcolor{gray!30}{Logical variable denoting a shot outcome}\\
+ACTION\_TYPE & character & Description of shot type (dunk, jump shot, etc.)\\
+\cellcolor{gray!30}{SHOT\_TYPE} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Type of shot (2 or 3-pointer)}\\
+BASIC\_ZONE & character & Name of the court zone the shot took place in\\
+\cellcolor{gray!30}{ZONE\_NAME} & \cellcolor{gray!30}{character} & \cellcolor{gray!30}{Name of the side of court the shot took place in}\\
+ZONE\_RANGE & character & Distance range of shot by zones\\
+\cellcolor{gray!30}{LOC\_X} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{X coordinate of the shot in the X,Y plane of the court}\\
+LOC\_Y & numeric & Y coordinate of the shot in the X,Y plane of the court\\
+\cellcolor{gray!30}{SHOT\_DISTANCE} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Distance of the shot to the center of the hoop, in ft}\\
+QUARTER & numeric & Quarter of the game\\
+\cellcolor{gray!30}{TIME\_LEFT} & \cellcolor{gray!30}{character} & \cellcolor{gray!30}{Minutes and seconds remaining in the quarter}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\hypertarget{nba-games-datasets}{%
+\subsection{NBA games datasets}\label{nba-games-datasets}}
+
+The second dataset used for the study pertains to NBA game results on a per-team basis. Similar to the shots dataset, various preprocessing steps are taken on this data. The structure of the games dataset is shown in Table \ref{tab:gamesdesc}. It is worth mentioning that the factor variable \texttt{WIN\_home}, which displays whether the team playing at home in a given game wins it, is used as an outcome variable in the modeling section of the thesis.
+
+\begin{table}[H]
+
+\caption{\label{tab:gamesdesc}Summary of the NBA games dataset}
+\centering
+\begin{tabular}[t]{lll}
+\toprule
+Variable & Type & Description\\
+\midrule
+\cellcolor{gray!30}{GAME\_DATE\_EST} & \cellcolor{gray!30}{Date} & \cellcolor{gray!30}{Date in which the game took place (Year-Month-Day)}\\
+GAME\_ID & numeric & NBA's unique ID variable of the game in their API\\
+\cellcolor{gray!30}{SEASON} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Season indicator}\\
+TEAM\_ID\_home & numeric & ID of the home team in the game\\
+\cellcolor{gray!30}{PTS\_home} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Total points scored by the home team}\\
+FG\_PCT\_home & numeric & Field Goal percentage for the home team\\
+\cellcolor{gray!30}{FT\_PCT\_home} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Free Throw percentage for the home team}\\
+FG3\_PCT\_home & numeric & 3 Point Field Goal percentage for the home team\\
+\cellcolor{gray!30}{AST\_home} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Number of assists for the home team}\\
+REB\_home & numeric & Number of rebounds for the home team\\
+\cellcolor{gray!30}{TEAM\_ID\_away} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{ID of the away team in the game}\\
+PTS\_away & numeric & Total points scored by the away team\\
+\cellcolor{gray!30}{FG\_PCT\_away} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Field Goal percentage for the away team}\\
+FT\_PCT\_away & numeric & Free Throw percentage for the away team\\
+\cellcolor{gray!30}{FG3\_PCT\_away} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{3 Point Field Goal percentage for the away team}\\
+AST\_away & numeric & Number of assists for the away team\\
+\cellcolor{gray!30}{REB\_away} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Number of rebounds for the away team}\\
+WIN\_home & factor & Factor indicating if the home team won the game\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Finally, the NBA game details dataset is analyzed. This dataset contains player statistics for each game. Preprocessing steps similar to those taken on the previous datasets are carried out here, including the removal of unneeded variables, the filling of \texttt{NA} values with zeros, and the addition of a \texttt{SEASON} column imported from the games dataset for analysis purposes. The structure of the player statistics dataset is shown in Table \ref{tab:gddesc}.
+
+\begin{table}[H]
+
+\caption{\label{tab:gddesc}Summary of the NBA players statistics dataset}
+\centering
+\begin{tabular}[t]{lll}
+\toprule
+Variable & Type & Description\\
+\midrule
+\cellcolor{gray!30}{GAME\_ID} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{NBA's game ID in their API}\\
+TEAM\_ID & numeric & ID of the player's team\\
+\cellcolor{gray!30}{TEAM\_ABBREVIATION} & \cellcolor{gray!30}{character} & \cellcolor{gray!30}{3-letter abbreviation of the team name}\\
+TEAM\_CITY & character & City in which the team plays\\
+\cellcolor{gray!30}{FGM} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Field Goals made by the player}\\
+FGA & numeric & Field Goals attempted by the player\\
+\cellcolor{gray!30}{FG3M} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{3 Point Field Goals made by the player}\\
+FG3A & numeric & 3 Point Field Goals attempted by the player\\
+\cellcolor{gray!30}{FTM} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Free Throws made by the player}\\
+FTA & numeric & Free Throws attempted by the player\\
+\cellcolor{gray!30}{REB} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Rebounds taken by the player}\\
+AST & numeric & Assists given by the player\\
+\cellcolor{gray!30}{STL} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Steals made by the player}\\
+BLK & numeric & Blocks made by the player\\
+\cellcolor{gray!30}{TO} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Turnovers made by the player}\\
+PF & numeric & Personal fouls made by the player\\
+\cellcolor{gray!30}{PTS} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Total points scored by the player}\\
+PLUS\_MINUS & numeric & Score difference when player in the game\\
+\cellcolor{gray!30}{SEASON} & \cellcolor{gray!30}{numeric} & \cellcolor{gray!30}{Season indicator}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+When performing exploratory data analysis, data from more than two datasets at the same time is often intersected and cross-checked in order to extract features of the data we are interested in and which may not be immediately available to us.
+
+\hypertarget{exploratory-data-analysis}{%
+\section{Exploratory data analysis}\label{exploratory-data-analysis}}
+
+The goal of this exploratory data analysis is to study different aspects of shooting data from NBA games, analyze shot efficiency, and understand the importance of shot selection in winning games. The analysis utilizes various statistical and graphical tools to extract insights.
+
+\hypertarget{point-field-goals}{%
+\subsection{3-point field goals}\label{point-field-goals}}
+
+Our initial focus was on the 3-point field goals over the past 20 seasons. The count of shot attempts and the ratio of three-point attempts to total attempts were calculated. This data was filtered to only include three-point shot information, and the shot results were labeled as ``Made'' (successful shots) or ``Missed'' (unsuccessful shots).
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_1} 
+
+}
+
+\caption{3-point field goals over total field goals between 2003 and 2022}\label{fig:3ptprog}
+\end{figure}
+
+We plotted the resulting distribution in Figure \ref{fig:3ptprog}, illustrating the trend of three-point shots in the NBA from the 2003-04 season to 2022-23. As it shows, there has been a significant increase in the relative frequency of 3-point attempts to total attempts over time, meaning that increasing 3 point shooting has been identified as a sensible strategy.
+
+\hypertarget{the-expected-value-statistic}{%
+\subsection{The Expected Value statistic}\label{the-expected-value-statistic}}
+
+\begin{wraptable}{r}{5.5cm}
+
+\caption{\label{tab:evinfo}Expected values of shots
+                 taken from each area of the court}
+\centering
+\begin{tabular}[t]{lr}
+\toprule
+Basic Zone & EV\\
+\midrule
+\cellcolor{gray!30}{Restricted Area} & \cellcolor{gray!30}{1.227}\\
+Right Corner 3 & 1.164\\
+\cellcolor{gray!30}{Left Corner 3} & \cellcolor{gray!30}{1.159}\\
+Above the Break 3 & 1.052\\
+\cellcolor{gray!30}{In The Paint (Non-RA)} & \cellcolor{gray!30}{0.813}\\
+Mid-Range & 0.797\\
+\cellcolor{gray!30}{Backcourt} & \cellcolor{gray!30}{0.075}\\
+\bottomrule
+\end{tabular}
+\end{wraptable}
+
+We then calculated the expected value (\texttt{EV}) of a shot in each basic zone of the court, to verify whether the increase in 3-point shooting was due to a higher efficiency generated by 3-point field goals. The \texttt{EV} was calculated as the product of the probability of a shot being made and the points the shot is worth. The resulting Table \ref{tab:evinfo} shows the expected values of shots taken from each area of the court.
+
+After this, we computed the average expected value per shot for each season and displayed it in a line chart in Figure \ref{fig:evprog}, demonstrating the increase in league-wide expected shooting efficiency between 2003-04 and 2022-23, and proving how teams have been actively implementing strategies that facilitate statistically efficient shooting.
+
+The data shown here is going to be pivotal over the next few sections of the project. We are in fact going to check, by using the \texttt{EV} feature as a predictor, whether games prediction quality is actually improved, which would imply that teams taking statistically better shots on average are also expected to win games at a higher rate.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_2} 
+
+}
+
+\caption{League-wide expected shooting efficiency between 2003 and 2022}\label{fig:evprog}
+\end{figure}
+
+We then determined the expected and actual win percentages for teams based on the \texttt{EV} statistic. The resulting Table \ref{tab:teamspct} summarizes team win percentages across a single season based on this sole predictor, and is sorted in descending order based on the best teams in terms of record. From a portion of this data, we can gauge that the predictor on its own is not extremely indicative of win chances, since successful teams like the 2015-16 Golden State Warriors do not appear to have necessarily taken efficient shots at much higher rates than other teams (the team was known for their extremely accurate 3 point shooting, but \texttt{EV} does not take into account individual team accuracy). In Figure \ref{fig:warriors} we can also compare how shooting charts for the Warriors have changed between the first season in the dataset, 2003-04, and their most successful season, 2015-16.
+
+\begin{table}[H]
+
+\caption{\label{tab:teamspct}Predictor-based win ratios
+                 vs. real win ratios for best
+                 teams of the last 20 seasons}
+\centering
+\begin{tabular}[t]{llrr}
+\toprule
+Season & Team Name & EV-based win ratio & Real win ratio\\
+\midrule
+\cellcolor{gray!30}{2015-16} & \cellcolor{gray!30}{Golden State Warriors} & \cellcolor{gray!30}{0.573} & \cellcolor{gray!30}{0.890}\\
+2014-15 & Golden State Warriors & 0.561 & 0.817\\
+\cellcolor{gray!30}{2015-16} & \cellcolor{gray!30}{San Antonio Spurs} & \cellcolor{gray!30}{0.439} & \cellcolor{gray!30}{0.817}\\
+2016-17 & Golden State Warriors & 0.415 & 0.817\\
+\cellcolor{gray!30}{2006-07} & \cellcolor{gray!30}{Dallas Mavericks} & \cellcolor{gray!30}{0.573} & \cellcolor{gray!30}{0.805}\\
+2007-08 & Boston Celtics & 0.537 & 0.805\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_3} 
+
+}
+
+\caption{Golden State Warriors shooting charts in 2003-04 and 2015-16}\label{fig:warriors}
+\end{figure}
+
+In the chart above, produced starting from a blank NBA court template\textsuperscript{{[}\protect\hyperlink{ref-BasketballCourtR}{8}{]}}, we can get an initial idea of how teams have been moving from a heavy reliance on mid-range shooting, towards a bigger emphasis dedicated to 3-point shooting, as well as shots closer to the hoop (in the Restricted Area, which as we also saw from Table \ref{tab:evinfo}, makes for the most efficient shooting zone).
+
+\begin{wraptable}{l}{7.15cm}
+
+\caption{\label{tab:analytical}Teams that took
+                 the most efficient shots on average}
+\centering
+\begin{tabular}[t]{llr}
+\toprule
+Season & Team Name & EV AVG\\
+\midrule
+\cellcolor{gray!30}{2019-20} & \cellcolor{gray!30}{Houston Rockets} & \cellcolor{gray!30}{1.08}\\
+2016-17 & Houston Rockets & 1.08\\
+\cellcolor{gray!30}{2018-19} & \cellcolor{gray!30}{Milwaukee Bucks} & \cellcolor{gray!30}{1.07}\\
+2017-18 & Houston Rockets & 1.07\\
+\cellcolor{gray!30}{2018-19} & \cellcolor{gray!30}{Houston Rockets} & \cellcolor{gray!30}{1.07}\\
+2021-22 & Houston Rockets & 1.07\\
+\bottomrule
+\end{tabular}
+\end{wraptable}
+
+We can, however, get a better idea of how large this shift has been by taking a look at Figure \ref{fig:rockets}, where shooting data for Daryl Morey's team, the Houston Rockets, is plotted side by side 14 seasons apart. As also shown in Table \ref{tab:analytical}, the Rockets account for 5 of the 6 seasons with the highest \texttt{EV} for a given team. This hints towards the fact that the Moreyball approach to game planning could coincide with a maximization of a statistic akin to the \texttt{EV}.
+
+2017-18 was the Rockets' most successful season, only falling short of an NBA title due to the Golden State Warriors stopping them in a hard-fought playoff series. Ironically, in a crucial playoff game against the Warriors, the Rockets missed a record-breaking 27 three point shots in a row\textsuperscript{{[}\protect\hyperlink{ref-Rockets27}{9}{]}}, proving that taking statistically efficient shots can only go so far in predicting a team's success.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_4} 
+
+}
+
+\caption{Houston Rockets shooting charts in 2003-04 and 2017-18}\label{fig:rockets}
+\end{figure}
+
+As we can see from the relationship between shot precision and game results (Figure \ref{fig:fgpred}), we can expect that including field goal accuracy statistics will make for extremely accurate game prediction, although this is an extremely obvious statement. We are mostly interested, over the next section, in seeing whether \texttt{EV} is useful as a companion to field goal accuracy metrics, and then whether it can also be useful as a main predictor for game results.
+
+\begin{figure}
+
+{\centering \subfloat[Shot precision relationship with game results\label{fig:fgpred-1}]{\includegraphics[width=0.49\linewidth]{latex/plots/plot_5} }\subfloat[3PT precision relationship with game results\label{fig:fgpred-2}]{\includegraphics[width=0.49\linewidth]{latex/plots/plot_6} }
+
+}
+
+\caption{Role of shot precision in games predictions}\label{fig:fgpred}
+\end{figure}
+
+\hypertarget{methodology-summary}{%
+\section{Methodology summary}\label{methodology-summary}}
+
+Our methodology centers around the idea of integrating various types of statistical modeling to analyze NBA data and predict game outcomes. A key component of our approach is the use of an ``Expected Value'' (\texttt{EV}) feature, which we derive from the NBA shots dataset and which represents a given shot type's expected efficiency based on data from the past 20 years.
+
+\hypertarget{variables-selection}{%
+\subsection{Variables selection}\label{variables-selection}}
+
+To begin with, we discuss the \texttt{EV} feature. As discussed before, we compute the \texttt{EV} based on the areas on the court from which shots are attempted; these areas are coded as \texttt{BASIC\_ZONE}. After computing the probability of successful shots from each area, we calculate the \texttt{EV} by multiplying this probability by the points gained from a successful shot (either 2 or 3). This value essentially reflects the ``value'' of each shot, taking into account its likelihood of success and the resulting points.
+
+Next, we will delve into our selection of predictor variables. Our outcome variable is binary, reflecting whether or not the home team won the game. Therefore, for each predictor statistic, we incorporate both the home and away team's data. The predictors also include field goal percentage (\texttt{FG\_PCT}), 3-point field goal percentage (\texttt{FG3\_PCT}), free throw percentage (\texttt{FT\_PCT}), assists (\texttt{AST}), and rebounds (\texttt{REB}), for both the home and away teams.
+
+However, in the models we use to assess the prediction improvement yielded by the \texttt{EV} feature, we may choose to exclude field goal statistics (\texttt{FG}, \texttt{FG3}). While it may seem counterintuitive to omit potentially important predictors, we have previously demonstrated that field goal percentage and 3-point field goal percentage are extremely strong predictors of a game's outcome (see Figure \ref{fig:fgpred}). Including these variables might skew the analysis and overshadow the contribution of other variables, such as the \texttt{EV} feature. Therefore, by also fitting models that omit them in the modeling section of the project, we can gain a more nuanced understanding of the impact of other variables on the game's outcome.
+
+\hypertarget{predictive-modeling-techniques}{%
+\subsection{Predictive modeling techniques}\label{predictive-modeling-techniques}}
+
+We use two types of statistical models in our analysis: Logistic Regression and Decision Trees.
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Logistic Regression}: The logistic regression model predicts the probability of the positive class (in this case, the home team winning) as a logistic function of a linear combination of the predictors\textsuperscript{{[}\protect\hyperlink{ref-AppLog}{10}{]}}.
+\end{itemize}
+
+The logistic function is given by:
+
+\[P(Y=1) = \frac{1}{1 + e^{-z}},\]
+
+where \(z\) is the linear combination of the predictors as seen below:
+
+\[z = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n.\]
+
+Here, \(\beta_0, \beta_1, \dots, \beta_n\) are the coefficients estimated by the model, and \(X_n\) represents the \(n\)-th predictor. Each coefficient quantifies the effect of a one-unit change in the corresponding predictor on the log-odds of the home team winning, assuming all other predictors remain constant.
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Decision Trees}: Decision trees partition the predictor space into several regions, and assign a prediction (either a class for classification problems, or a mean response for regression problems) to each region\textsuperscript{{[}\protect\hyperlink{ref-QuinlanDT}{11}{]}}.
+\end{itemize}
+
+For a binary classification problem like ours, the decision tree is constructed as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  For each predictor X, and for each possible value \(s\) of \(X\), consider splitting the predictor space into two regions: \(\{X \leq s\}\) and \(\{X > s\}\). Calculate an impurity measure (such as the Gini impurity index) for each region.
+\item
+  Choose the predictor and cutoff point such that the resulting partition minimizes the sum of the impurity measures for the two regions.
+\item
+  Continue this process, but now split one of the two regions obtained from the previous step. Again, choose the predictor and cutoff point to minimize the sum of impurities.
+  Repeat these steps until a stopping criterion is met (e.g., a maximum depth is reached).
+\end{enumerate}
+
+A decision tree is, in essence, a series of questions about the predictors, where each question is of the form ``Is predictor \(X\) less than or equal to \(s\)?''. The final decision (or prediction) for an observation is based on the path it takes through the tree, from the root to a leaf.
+
+For both models, we partition our data into a training set (seasons up to and including 2019) and a testing set (seasons after 2019). After fitting the models to the training data, we assess their performance on the testing data using confusion matrices and classification metrics.
+
+Additionally, to robustly estimate our models' predictive accuracy, we employ \(k\)-fold cross-validation. This technique involves dividing the training data into \(k\) subsets and training and testing the model on different subsets across \(k\) iterations\textsuperscript{{[}\protect\hyperlink{ref-kFold}{12}{]}}. We wrote a function that automates this process and returns an array of performance metrics, predictions, and logistic model coefficients across all iterations.
+
+\hypertarget{prediction-and-modeling}{%
+\section{Prediction and modeling}\label{prediction-and-modeling}}
+
+In this section, we delve deeper into the process of preparing our dataset for modeling, and performing predictive modeling using logistic regression and decision tree techniques, as well as the role of performance metrics in evaluating different models.
+
+\hypertarget{dataset-preparation}{%
+\subsection{Dataset preparation}\label{dataset-preparation}}
+
+The data manipulation involves various steps, such as joining distinct games details and information about the \texttt{EV} of shots in any given game, which provides us with the \texttt{EV\_home} and \texttt{EV\_away} variables. The data pre-processing step is crucial to ensure the accurate alignment of the predictors and the outcome variable. As previously described, the dataset was then segmented into training and testing sets based on the season year, with all games up to the year 2019 assigned to the training set, and games from 2020 onwards allocated to the testing set.
+
+\hypertarget{initial-model-fitting}{%
+\subsection{Initial model fitting}\label{initial-model-fitting}}
+
+As an initial exploratory step, the logistic regression model\textsuperscript{{[}\protect\hyperlink{ref-glm}{13}{]}} is fitted to the training dataset without any further pre-processing.
+
+The coefficients of the logistic regression model are an important part of understanding the model, as they quantify the effect of a one-unit change in the corresponding predictor on the log-odds of the home team winning, holding all other predictors constant. The coefficients, along with their standard errors and significance levels, are displayed in Table \ref{tab:tidyfit}, which elucidates the influence of each predictor variable.
+
+\begin{table}[H]
+
+\caption{\label{tab:tidyfit}Model coefficients of
+                 logistic regression using all predictors}
+\centering
+\begin{tabular}[t]{lrrrr}
+\toprule
+Variable & Coefficient & Std. error & Statistic & p-value\\
+\midrule
+\cellcolor{gray!30}{(Intercept)} & \cellcolor{gray!30}{-0.020} & \cellcolor{gray!30}{0.682} & \cellcolor{gray!30}{-0.029} & \cellcolor{gray!30}{0.977}\\
+EV\_home & 0.076 & 0.004 & 19.041 & 0.000\\
+\cellcolor{gray!30}{EV\_away} & \cellcolor{gray!30}{-0.086} & \cellcolor{gray!30}{0.004} & \cellcolor{gray!30}{-21.616} & \cellcolor{gray!30}{0.000}\\
+FG\_PCT\_home & 33.395 & 0.803 & 41.609 & 0.000\\
+\cellcolor{gray!30}{FT\_PCT\_home} & \cellcolor{gray!30}{5.442} & \cellcolor{gray!30}{0.241} & \cellcolor{gray!30}{22.589} & \cellcolor{gray!30}{0.000}\\
+FG3\_PCT\_home & 5.218 & 0.229 & 22.777 & 0.000\\
+\cellcolor{gray!30}{AST\_home} & \cellcolor{gray!30}{0.044} & \cellcolor{gray!30}{0.006} & \cellcolor{gray!30}{7.524} & \cellcolor{gray!30}{0.000}\\
+REB\_home & 0.082 & 0.006 & 13.644 & 0.000\\
+\cellcolor{gray!30}{FG\_PCT\_away} & \cellcolor{gray!30}{-33.721} & \cellcolor{gray!30}{0.808} & \cellcolor{gray!30}{-41.756} & \cellcolor{gray!30}{0.000}\\
+FT\_PCT\_away & -4.816 & 0.230 & -20.983 & 0.000\\
+\cellcolor{gray!30}{FG3\_PCT\_away} & \cellcolor{gray!30}{-5.174} & \cellcolor{gray!30}{0.229} & \cellcolor{gray!30}{-22.583} & \cellcolor{gray!30}{0.000}\\
+AST\_away & -0.032 & 0.006 & -5.655 & 0.000\\
+\cellcolor{gray!30}{REB\_away} & \cellcolor{gray!30}{-0.070} & \cellcolor{gray!30}{0.006} & \cellcolor{gray!30}{-11.768} & \cellcolor{gray!30}{0.000}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+From these, we can see that the efficiency of shots for the home and away teams (\texttt{EV\_home} and \texttt{EV\_away}) are statistically significant predictors at any significance level. The coefficients for \texttt{EV\_home} and \texttt{EV\_away} are positive and negative, respectively, indicating that increased shot value for the home team and decreased shot value for the away team both lead to a higher probability of a home team win. This same pattern also holds for the other variables.
+
+While a naive interpretation of the coefficients of field goal percentage (\texttt{FG\_PCT}), 3-point field goal percentage (\texttt{FG3\_PCT}), and free throw percentage (\texttt{FT\_PCT}) would indicate that they are strongly predictive, we cannot simply interpret the coefficients as it is without normalizing the data first, since the data across different columns has variable structure, with the shooting variables taking the form of ratios (ranging from 0 to 1), and other statistics simply being numerical totals. For this reason, in the following steps of the modeling part, the data will also be normalized to ease interpretation of the coefficients.
+
+The confusion matrix is a basic tool for assessing the performance of a classification model. It provides an overview of the predicted and actual classifications. In the confusion matrices generated for both logistic regression and decision tree models, the entries on the diagonal represent correct predictions, while off-diagonal entries represent incorrect predictions. The accuracy, sensitivity, specificity, and other classification metrics can be derived from this matrix.
+
+\begin{wraptable}{r}{3.5cm}
+
+\caption{\label{tab:confmatlr}Logistic regression model confusion matrix}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+  & No & Yes\\
+\midrule
+\cellcolor{gray!30}{No} & \cellcolor{gray!30}{1040} & \cellcolor{gray!30}{164}\\
+Yes & 211 & 1396\\
+\bottomrule
+\end{tabular}
+\end{wraptable}
+
+Table \ref{tab:confmatlr} shows the confusion matrix for the logistic regression model. We can observe that the model correctly predicted 1040 losses and 1396 wins for the home team, while it misclassified 164 losses as wins and 211 wins as losses for the home team.
+
+The decision tree model is subsequently fit to the training data, using the same predictors. Similar classification results as the logistic regression, albeit slightly worse, are achieved by the decision tree automatically fitted by the \texttt{rpart}\textsuperscript{{[}\protect\hyperlink{ref-rpart}{14}{]}} engine included in the \texttt{tidymodels} suite (see Table \ref{tab:confmatdt}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_7} 
+
+}
+
+\caption{Decision tree plot for model with all variables included}\label{fig:dtall}
+\end{figure}
+
+Additionally, a second decision tree model is fit, omitting field goal statistics from the predictors (\texttt{FG}, \texttt{FG3}). This approach allows us to assess the predictive performance of the model with and without these strong predictors.
+
+\begin{wraptable}{l}{3.5cm}
+
+\caption{\label{tab:confmatdt}Decision tree model confusion matrix}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+  & No & Yes\\
+\midrule
+\cellcolor{gray!30}{No} & \cellcolor{gray!30}{893} & \cellcolor{gray!30}{235}\\
+Yes & 358 & 1325\\
+\bottomrule
+\end{tabular}
+\end{wraptable}
+
+The decision tree models' structure is visualized in Figure \ref{fig:dtall} and Figure \ref{fig:dtnofg}. Each decision tree begins at the root and branches off into internal nodes, each of which represents a decision rule. This decision leads to either another internal node (i.e., another decision) or a leaf node (i.e., a final prediction). These plots provide a visual interpretation of the decision-making process of the model\textsuperscript{{[}\protect\hyperlink{ref-rpartplot}{15}{]}}.
+
+Figure \ref{fig:dtall} presents a decision tree plot for the model with all predictor variables. The decision tree model uses the \texttt{FG\_PCT\_away} and \texttt{FG\_PCT\_home} as primary splits, highlighting the strong influence of these variables on the model's prediction.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_8} 
+
+}
+
+\caption{Variable Importance plot for model with all variables included}\label{fig:vipall}
+\end{figure}
+
+The variable importance plots rank the predictors according to their weight in the decision tree models\textsuperscript{{[}\protect\hyperlink{ref-bruce2020practical}{16}{]}}. The importance of a variable in a decision tree is calculated by summing up the goodness of split measures for each split where the variable was the primary one, and also considering the goodness for all surrogate splits involving the variable\textsuperscript{{[}\protect\hyperlink{ref-rpart-vignette}{17}{]}}. Essentially, importance scores are a way of scoring how useful each feature is for creating splits in our data. They help us understand which features are most influential in making predictions. It is worth mentioning that variable importance in tree-based models is not uniquely determined. Following recent research\textsuperscript{{[}\protect\hyperlink{ref-permvip}{18}{]}}, we have chosen to include Gini impurity-based variable importance scores, which are what \texttt{rpart} defaults to.
+
+The variable importance plot (Figure \ref{fig:vipall}) for the decision tree model with all variables indicates that the most crucial variables according to the model are, once again, the field goal statistics. We can notice that the free throw variables are missing from this plot. This is by design: the tree-building process in the \texttt{rpart} algorithm is responsible for this outcome. The process begins by identifying the single variable that optimally splits the data into two groups. This splitting process is then recursively applied to each subgroup, continuing until the subgroups reach a minimum size or no further improvement can be achieved. As a result, certain variables may be excluded from the final model.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_9} 
+
+}
+
+\caption{Decision tree plot for model without shooting variables}\label{fig:dtnofg}
+\end{figure}
+
+When we remove the field goal statistics from the model, the decision tree uses \texttt{AST} and \texttt{REB} as primary splits (Figure \ref{fig:dtnofg}). The importance of these variables is confirmed in the variable importance plot without FGs (Figure \ref{fig:vipnofg}). From here, we can see that the role of the \texttt{EV\_home} and \texttt{EV\_away} statistics is quite important in the decisions adopted by the tree model.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_10} 
+
+}
+
+\caption{Variable Importance plot for model without shooting variables}\label{fig:vipnofg}
+\end{figure}
+
+\hypertarget{cross-validation}{%
+\subsection{Cross-validation}\label{cross-validation}}
+
+Finally, to robustly estimate our models' predictive accuracy, we employ \(k\)-fold cross-validation. This involves partitioning the training data into \(k\) subsets and training and testing the model on different subsets across \(k\) iterations. This process allows us to obtain a more unbiased estimate of the model's performance\textsuperscript{{[}\protect\hyperlink{ref-hastie-elements}{19}{]}}. As mentioned before, we also took a further step in normalizing the data in order to ease interpetation of the model coefficients.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_11} 
+
+}
+
+\caption{Regression coefficients plot for 10-fold full model cross-validation}\label{fig:regcoeffs}
+\end{figure}
+
+The logistic regression coefficients obtained from the \(k\)-fold cross-validation for each predictor are displayed in Figure \ref{fig:regcoeffs}. The plot shows the estimates along with the 95\% confidence intervals for each fold, as well as the average estimate across all folds. It fundamentally helps us visualize how ``stable'' the model fit is, by showing the amount of variation in the weight assigned by the logistic model to the same feature across different random data splits. It can also give us an idea of whether the training set is large enough to produce a reliable model.
+
+In our case, the spread of coefficients reflects the model's stability across different data splits, and appears to confirm a significant prediction influence given by the \texttt{EV\_home} and \texttt{EV\_away} statistics.
+
+\hypertarget{model-evaluation-metrics}{%
+\subsection{Model evaluation metrics}\label{model-evaluation-metrics}}
+
+In order to evaluate our models, we can show a number of metrics that all evaluate the quality of classification. We will give a quick introduction to these measures:
+
+\begin{itemize}
+\item
+  Cohen's Kappa (\(\kappa\)) is a statistic that gauges the level of agreement between the predicted and actual classes beyond what would be expected by chance. It's formulated as: \[\kappa=\frac{p_0-p_e}{1-p_e},\] where \(p_0\) represents the observed agreement, and \(p_e\) is the expected agreement by chance\textsuperscript{{[}\protect\hyperlink{ref-cohenkappa}{20}{]}}.
+\item
+  F-measure (\(F\)) is the harmonic mean of precision and recall, which provides a balanced measure especially useful in uneven class distribution scenarios. It's given by: \[F=\frac{2\cdot\text{Precision}\cdot\text{Recall}}{\text{Precision}+\text{Recall}}.\] Here, Precision is the proportion of true positive predictions (home team actually won and was predicted to win) out of all positive predictions, and Recall (or Sensitivity) is the proportion of true positive predictions out of all actual positive instances (home team actually won)\textsuperscript{{[}\protect\hyperlink{ref-fmeas}{21}{]}}.
+\item
+  ROC AUC (Receiver Operating Characteristic Area Under Curve) represents a model's ability to distinguish between classes, with an AUC value between 0 (100\% wrong predictions) and 1 (100\% correct predictions). On the other hand, a value of 0.5 suggests that the model has no discrimination capacity and is as good as random guessing\textsuperscript{{[}\protect\hyperlink{ref-rocauc}{22}{]}}.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_12} 
+
+}
+
+\caption{Comparison of model metrics for 4 different models}\label{fig:metricsplot}
+\end{figure}
+
+The model metrics comparison (Figure \ref{fig:regcoeffs}) shows that logistic regression models outperform decision tree models in terms of all metrics, regardless of whether field goal statistics are included or not. This suggests that logistic regression provides a better balance between sensitivity and specificity in predicting game winners.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{latex/plots/plot_13} 
+
+}
+
+\caption{Comparison of ROC curves for 4 different models}\label{fig:roccurve}
+\end{figure}
+
+Finally, the comparison of ROC curves for the four different models (Figure \ref{fig:roccurve}) confirms the superiority of logistic regression models, as they achieve higher true positive rates at the same false positive rates.
+
+A Receiver Operating Characteristic (ROC) curve is a plot that visualizes the performance of a binary classification model. The curve is created by plotting the true positive rate (sensitivity) against the false positive rate (1-specificity) at various threshold settings.
+
+A test with perfect discrimination has a ROC curve that passes through the upper left corner (100\% sensitivity, 100\% specificity). Therefore, the closer the ROC curve is to the upper left corner, the higher the overall accuracy of the test.
+
+So, in essence, ROC curves give a graphical representation of the trade-off between the model's sensitivity and specificity, and the ROC AUC provided above is a single number summarizing the overall quality of the model.
+
+The models without field goal precision perform slightly worse, emphasizing the importance of shooting statistics in predicting NBA game outcomes. However, it is worth noting that even without predicsion data, the models still provide reasonably good predictive performance.
+
+\hypertarget{conclusions-and-limitations}{%
+\section{Conclusions and limitations}\label{conclusions-and-limitations}}
+
+In summary, our analysis demonstrates that including the efficiency of shots that a team takes as an explanatory variable can enhance the prediction of NBA game outcomes. The research provided in this thesis represents an exploration into predicting NBA game outcomes using logistic regression and decision tree models. These models were developed and tested using available data, with shot efficiency emerging as a significant predictor. Logistic regression demonstrated better performance, regardless of the inclusion of shooting precision statistics.
+
+However, there are several notable limitations that should be considered in assessing the findings. A crucial aspect to consider is that our predictions are fundamentally retrospective in nature. The models developed in this study are based on post-game data, meaning they aim to explain the key components that influenced a game's outcome, rather than forecasting future results.
+
+This is a different goal compared to that of a bookmaker, who must predict outcomes ahead of time, often without the full spectrum of data we had at our disposal. This distinction is paramount since prospective predictions are inherently more challenging due to uncertainties such as player injuries, unpredictable shifts in strategy, or unexpected player performance. The models used here, while effective in highlighting influential factors in a game's result, do not necessarily lend themselves directly to the real-time predictive power needed for tasks like setting betting odds.
+
+The analysis also relied on relatively simple models. More sophisticated methods, such as Random Forests and Gradient Boosting, might improve upon these results. The variable selection was also confined to available data, excluding potentially significant factors such as, to name one, player fatigue. Regardless, recent research\textsuperscript{{[}\protect\hyperlink{ref-luck}{23}{]}} demonstrates the significant presence of luck in even the most competitive sports championships, which partially explains why sophisticated feature-based models hardly outperform simple models in predicting sports outcomes.
+
+In addition, no hyperparameter optimization was conducted on the models. Given that both logistic regression and (particularly) decision trees have hyperparameters that can be tuned for better performance, this may have affected the models' potential. For example, in a decision tree, hyperparameters such as the maximum depth of the tree or the minimum samples required to split a node could significantly influence the model's performance.
+
+There may also have been issues of overfitting or underfitting the models to the training data, or of not accounting for time-dependent changes in game dynamics. The logistic regression model assumes independence between observations, an assumption that may is not valid with real-world data, as there may be correlations between results of different games.
+
+Overall, while this research offers some insights into predicting NBA game outcomes, there is significant scope for improvement and refinement in future studies. In particular, future research could benefit from an attempt to integrate a predictive element, possibly by incorporating more real-time variables or by utilizing a different modeling approach.
+
+\newpage
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\markboth{References}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Moneyball}{}}%
+1. Lewis, M. (2003). \emph{Moneyball: The art of winning an unfair game}. W. W. Norton \& Company. \url{https://wwnorton.com/books/9780393324815}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Moreyball}{}}%
+2. Catalfano, J. J. (2015). \emph{Moneyball to moreyball: How analytics have shaped the NBA today}. \url{https://fisherpub.sjf.edu/sport_undergrad/106}
+
+\leavevmode\vadjust pre{\hypertarget{ref-RTidyverse}{}}%
+3. Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., \ldots{} Yutani, H. (2019). Welcome to the {tidyverse}. \emph{Journal of Open Source Software}, \emph{4}(43), 1686. \url{https://doi.org/10.21105/joss.01686}
+
+\leavevmode\vadjust pre{\hypertarget{ref-RTidymodels}{}}%
+4. Kuhn, M., \& Wickham, H. (2020). \emph{Tidymodels: A collection of packages for modeling and machine learning using tidyverse principles.} \url{https://www.tidymodels.org}
+
+\leavevmode\vadjust pre{\hypertarget{ref-NBAStats}{}}%
+5. National Basketball Association. (2023). \emph{{NBA Stats}}. {stats.nba.com}. \url{https://stats.nba.com/}
+
+\leavevmode\vadjust pre{\hypertarget{ref-GithubNBAShots}{}}%
+6. Samangy, Dominic. (2023). \emph{{NBA Shots Dataset}}. {GitHub repository}. \url{https://github.com/DomSamangy/NBA_Shots_04_23}
+
+\leavevmode\vadjust pre{\hypertarget{ref-KaggleNBAGames}{}}%
+7. Lauga, Nathan. (2023). \emph{{NBA Games Dataset}}. {Kaggle}. \url{https://www.kaggle.com/datasets/nathanlauga/nba-games}
+
+\leavevmode\vadjust pre{\hypertarget{ref-BasketballCourtR}{}}%
+8. Gallic, Ewen. (2014). \emph{{Drawing a Basketball Court with R}}. {Web Archive}. \url{https://web.archive.org/web/20210616005412/https://egallic.fr/en/drawing-a-basketball-court-with-r/}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Rockets27}{}}%
+9. Rollins, K. (2018, May 29). \emph{Rockets break playoff record: 27 consecutive missed three-pointers}. \url{https://www.si.com/nba/2018/05/29/rockets-break-playoff-record-27-consecutive-missed-three-pointers}
+
+\leavevmode\vadjust pre{\hypertarget{ref-AppLog}{}}%
+10. Hosmer, D. W., \& Lemeshow, S. (2013). \emph{Applied logistic regression}. Wiley. \url{https://doi.org/10.1002/9781118548387}
+
+\leavevmode\vadjust pre{\hypertarget{ref-QuinlanDT}{}}%
+11. Quinlan, J. R. (1987). Simplifying decision trees. \emph{International Journal of Man-Machine Studies}, \emph{27}(3), 221--234. https://doi.org/\url{https://doi.org/10.1016/S0020-7373(87)80053-6}
+
+\leavevmode\vadjust pre{\hypertarget{ref-kFold}{}}%
+12. Soper, D. S. (2021). Greed is good: Rapid hyperparameter optimization and model selection using greedy k-fold cross validation. \emph{Electronics}, \emph{10}(16). \url{https://doi.org/10.3390/electronics10161973}
+
+\leavevmode\vadjust pre{\hypertarget{ref-glm}{}}%
+13. R Core Team. (2023). \emph{Glm: Fitting generalized linear models}. \url{https://stat.ethz.ch/R-manual/R-patched/library/stats/html/glm.html}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rpart}{}}%
+14. Therneau, T., Atkinson, B., \& Ripley, B. (2022). \emph{Rpart: Recursive partitioning and regression trees}. \url{https://cran.r-project.org/package=rpart}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rpartplot}{}}%
+15. Milborrow, S. (2022). \emph{Rpart.plot: Plot 'rpart' models: An enhanced version of 'plot.rpart'}. \url{http://www.milbo.org/rpart-plot/index.html}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bruce2020practical}{}}%
+16. Bruce, P., Bruce, A., \& Gedeck, P. (2020). \emph{Practical statistics for data scientists}. O'Reilly Media, Inc.
+
+\leavevmode\vadjust pre{\hypertarget{ref-rpart-vignette}{}}%
+17. Therneau, T. M., \& Atkinson, E. J. (2022). \emph{An introduction to recursive partitioning: Using the RPART routines}. Mayo Foundation. \url{https://cran.r-project.org/web/packages/rpart/vignettes/longintro.pdf}
+
+\leavevmode\vadjust pre{\hypertarget{ref-permvip}{}}%
+18. Loh, W.-Y., \& Zhou, P. (2021). \emph{Variable importance scores}. \url{https://arxiv.org/abs/2102.07765}
+
+\leavevmode\vadjust pre{\hypertarget{ref-hastie-elements}{}}%
+19. Hastie, T., Tibshirani, R., \& Friedman, J. (2009). \emph{The elements of statistical learning: Data mining, inference, and prediction, second edition} (2nd ed., pp. XXII, 745). Springer. \url{https://doi.org/10.1007/978-0-387-84858-7}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cohenkappa}{}}%
+20. Cohen, J. (1960). A coefficient of agreement for nominal scales. \emph{Educational and Psychological Measurement}, \emph{20}(1), 37--46. \url{https://doi.org/10.1177/001316446002000104}
+
+\leavevmode\vadjust pre{\hypertarget{ref-fmeas}{}}%
+21. Powers, D. M. (2011). Evaluation: From precision, recall and f-measure to ROC, informedness, markedness and correlation. \emph{Journal of Machine Learning Technologies}, \emph{2}(1), 37--63.
+
+\leavevmode\vadjust pre{\hypertarget{ref-rocauc}{}}%
+22. Fawcett, T. (2006). An introduction to ROC analysis. \emph{Pattern Recognition Letters}, \emph{27}(8), 861--874. \url{https://doi.org/10.1016/j.patrec.2005.10.010}
+
+\leavevmode\vadjust pre{\hypertarget{ref-luck}{}}%
+23. Aoki, R. Y. S., Assuncao, R. M., \& Vaz de Melo, P. O. S. (2017). Luck is hard to beat: The difficulty of sports prediction. \emph{Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}, 1367--1376. \url{https://doi.org/10.1145/3097983.3098045}
+
+\leavevmode\vadjust pre{\hypertarget{ref-BallGlossary}{}}%
+24. Wikipedia contributors. (2023). \emph{Glossary of basketball terms --- {Wikipedia}{,} the free encyclopedia}. \url{https://en.wikipedia.org/w/index.php?title=Glossary_of_basketball_terms\&oldid=1160678356}
+
+\end{CSLReferences}
+
+\newpage
+
+\hypertarget{appendix-appendix}{%
+\appendix}
+
+
+\hypertarget{glossary}{%
+\section{Glossary of basketball terms}\label{glossary}}
+
+\begin{table}[H]
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{ll}
+\toprule
+Term & Meaning\\
+\midrule
+\cellcolor{gray!30}{Above the Break 3} & \cellcolor{gray!30}{Any three-point field goal that is not taken from the corners.}\\
+Assist & A pass by a player that leads directly to a teammate scoring a basket.\\
+\cellcolor{gray!30}{Backboard} & \cellcolor{gray!30}{The rectangular board located behind the rim.}\\
+Backcourt & The half of the court a team is defending. The area from the midcourt line to the end line.\\
+\cellcolor{gray!30}{Baseline} & \cellcolor{gray!30}{The line that marks the playing boundary at either end of the court.}\\
+Block & When a defensive player legally deflects a field goal attempt from an offensive player.\\
+\cellcolor{gray!30}{Charging Foul} & \cellcolor{gray!30}{An offensive foul which occurs when a player with the ball rushes into a non-moving defender.}\\
+Corner 3 & The area on the left and right side of the court. The 3-point line is a few inches closer to the hoop in the corners.\\
+\cellcolor{gray!30}{Dunk} & \cellcolor{gray!30}{Type of shot where the player jumps in the air and throws the ball into the basket from above the rim.}\\
+Field Goal & A shot made or attempted from anywhere on the court (not including free throws).\\
+\cellcolor{gray!30}{Foul} & \cellcolor{gray!30}{A violation of the rules, usually involving illegal contact with an opponent.}\\
+Free Throw & A shot, worth one point, awarded to a player who is fouled. The player shoots unopposed from the free-throw line.\\
+\cellcolor{gray!30}{Half-court} & \cellcolor{gray!30}{The division of the court into two equal sections, marked by the mid-court line.}\\
+Hoop & The circular ring through which players aim to put the ball. Also called 'Basket'.\\
+\cellcolor{gray!30}{Jump Shot} & \cellcolor{gray!30}{A shot taken after a player has jumped into the air.}\\
+Layup & A shot where a player drives towards the basket and then banks the ball off the backboard.\\
+\cellcolor{gray!30}{Mid-range} & \cellcolor{gray!30}{A shot taken about 10-20 feet from the basket.}\\
+Paint & The area inside the paint, which includes the free-throw lane and circle.\\
+\cellcolor{gray!30}{Perimeter} & \cellcolor{gray!30}{The outer area of the half-court, beyond the free-throw circle and within the three-point line.}\\
+Rebound & The act of securing possession of the ball after a missed field goal or free throw.\\
+\cellcolor{gray!30}{Restricted Area} & \cellcolor{gray!30}{The four-foot arc from the center of the hoop. Offensive players cannot draw charging fouls within this area.}\\
+Rim & The circular piece of iron that the net is attached to on a basketball hoop.\\
+\cellcolor{gray!30}{Steal} & \cellcolor{gray!30}{When a defensive player legally causes an opponent to turn over the ball.}\\
+Three-Point Field Goal & A field goal made from beyond a designated line on the court, worth three points.\\
+\cellcolor{gray!30}{Turnover} & \cellcolor{gray!30}{When a player loses possession of the ball, resulting in the ball being awarded to the opponent.}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\newpage
+
+\hypertarget{figures-and-tables}{%
+\section{Figures and tables}\label{figures-and-tables}}
+
+\listoffigures
+\listoftables
+
+\markboth{B \hspace{1.9mm} Figures and tables}{B \hspace{1.9mm} Figures and tables}
+
+\newpage
+
+\hypertarget{code-appendix}{%
+\section{Code appendix}\label{code-appendix}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Setup options for R Markdown}
+
+\CommentTok{\# Load libraries}
+\FunctionTok{library}\NormalTok{(knitr)       }\CommentTok{\# provides the kable function \& chunk options}
+\FunctionTok{library}\NormalTok{(kableExtra)  }\CommentTok{\# provides kable\_styling for kable settings}
+\FunctionTok{library}\NormalTok{(tidyverse)   }\CommentTok{\# loads amongst others dplyr, tidyr and ggplot2}
+\FunctionTok{library}\NormalTok{(tidymodels)  }\CommentTok{\# loads several packages useful for model testing}
+\FunctionTok{library}\NormalTok{(rpart.plot)  }\CommentTok{\# provides plotting helper for decision trees}
+
+\CommentTok{\# Set basic display options}
+\FunctionTok{options}\NormalTok{(}
+  \AttributeTok{digits =} \DecValTok{3}\NormalTok{,   }\CommentTok{\# limit the number of significant digits}
+  \AttributeTok{width  =} \DecValTok{63}   \CommentTok{\# limit the width of code output}
+\NormalTok{)}
+
+\CommentTok{\# Set knitr options}
+\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}
+  \AttributeTok{echo       =} \ConstantTok{FALSE}\NormalTok{,    }\CommentTok{\# Do not print code}
+  \AttributeTok{warning    =} \ConstantTok{FALSE}\NormalTok{,    }\CommentTok{\# Suppress warnings}
+  \AttributeTok{message    =} \ConstantTok{FALSE}\NormalTok{,    }\CommentTok{\# Suppress messages}
+  \AttributeTok{fig.align  =} \StringTok{"center"}  \CommentTok{\# Center figures}
+\NormalTok{)}
+
+\CommentTok{\# Set a default ggplot theme}
+\FunctionTok{theme\_set}\NormalTok{(}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{16}\NormalTok{,}
+                                  \AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{plot.subtitle =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{, }\AttributeTok{size =} \DecValTok{14}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{13}\NormalTok{),}
+        \AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{vjust =} \FloatTok{1.5}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{12}\NormalTok{),}
+        \AttributeTok{legend.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{12}\NormalTok{),}
+        \AttributeTok{strip.background =} \FunctionTok{element\_rect}\NormalTok{(}\AttributeTok{fill =} \StringTok{"black"}\NormalTok{),}
+        \AttributeTok{strip.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{12}\NormalTok{,}
+                                  \AttributeTok{color =} \StringTok{"white"}\NormalTok{)))}
+
+\DocumentationTok{\#\# Code used in the analysis itself}
+
+\FunctionTok{source}\NormalTok{(}\StringTok{"other/bb\_court.R"}\NormalTok{) }\CommentTok{\# loads basketball court plot object}
+
+\CommentTok{\# load nba shots dataset}
+\NormalTok{shots }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"dataset/nbashots0423/NBA\_2004\_2023\_Shots.csv"}\NormalTok{)}
+
+\CommentTok{\# preprocess the data in the shots dataset}
+\NormalTok{shots }\SpecialCharTok{\%\textless{}\textgreater{}\%}
+  \CommentTok{\# remove a few unneeded variables from the dataset}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{SEASON\_1, }\SpecialCharTok{{-}}\NormalTok{EVENT\_TYPE, }\SpecialCharTok{{-}}\NormalTok{GAME\_DATE,}
+         \SpecialCharTok{{-}}\NormalTok{POSITION, }\SpecialCharTok{{-}}\NormalTok{POSITION\_GROUP, }\SpecialCharTok{{-}}\NormalTok{ZONE\_ABB,}
+         \SpecialCharTok{{-}}\NormalTok{PLAYER\_ID, }\SpecialCharTok{{-}}\NormalTok{PLAYER\_NAME) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# join mins left and secs left inside the same variable}
+  \FunctionTok{unite}\NormalTok{(TIME\_LEFT, }\FunctionTok{c}\NormalTok{(MINS\_LEFT,SECS\_LEFT), }\AttributeTok{sep =} \StringTok{":"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# make some ids shorter}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{TEAM\_ID    =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{str\_sub}\NormalTok{(TEAM\_ID, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{)),}
+         \AttributeTok{SHOT\_TYPE  =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{str\_sub}\NormalTok{(SHOT\_TYPE, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{)),}
+         \CommentTok{\# make sure no outdated names/abbreviations are used}
+         \AttributeTok{TEAM\_NAME  =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{         TEAM\_NAME }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"New Orleans Hornets"}\NormalTok{,}
+                          \StringTok{"New Orleans/Oklahoma City Hornets"}\NormalTok{)}
+                          \SpecialCharTok{\textasciitilde{}} \StringTok{"New Orleans Pelicans"}\NormalTok{,}
+\NormalTok{         TEAM\_NAME }\SpecialCharTok{==} \StringTok{"New Jersey Nets"} \SpecialCharTok{\textasciitilde{}} \StringTok{"Brooklyn Nets"}\NormalTok{,}
+\NormalTok{         TEAM\_NAME }\SpecialCharTok{==} \StringTok{"Seattle SuperSonics"} \SpecialCharTok{\textasciitilde{}} \StringTok{"Oklahoma City Thunder"}\NormalTok{,}
+\NormalTok{         TEAM\_NAME }\SpecialCharTok{==} \StringTok{"LA Clippers"} \SpecialCharTok{\textasciitilde{}} \StringTok{"Los Angeles Clippers"}\NormalTok{,}
+\NormalTok{         TEAM\_NAME }\SpecialCharTok{==} \StringTok{"Charlotte Bobcats"} \SpecialCharTok{\textasciitilde{}} \StringTok{"Charlotte Hornets"}\NormalTok{,}
+         \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}}\NormalTok{ TEAM\_NAME),}
+         \AttributeTok{HOME\_TEAM  =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{         HOME\_TEAM }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"NOH"}\NormalTok{, }\StringTok{"NOK"}\NormalTok{) }\SpecialCharTok{\textasciitilde{}} \StringTok{"NOP"}\NormalTok{,}
+\NormalTok{         HOME\_TEAM }\SpecialCharTok{==} \StringTok{"NJN"} \SpecialCharTok{\textasciitilde{}} \StringTok{"BKN"}\NormalTok{,}
+\NormalTok{         HOME\_TEAM }\SpecialCharTok{==} \StringTok{"SEA"} \SpecialCharTok{\textasciitilde{}} \StringTok{"OKC"}\NormalTok{,}
+         \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}}\NormalTok{ HOME\_TEAM),}
+         \AttributeTok{AWAY\_TEAM  =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{         AWAY\_TEAM }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"NOH"}\NormalTok{, }\StringTok{"NOK"}\NormalTok{) }\SpecialCharTok{\textasciitilde{}} \StringTok{"NOP"}\NormalTok{,}
+\NormalTok{         AWAY\_TEAM }\SpecialCharTok{==} \StringTok{"NJN"} \SpecialCharTok{\textasciitilde{}} \StringTok{"BKN"}\NormalTok{,}
+\NormalTok{         AWAY\_TEAM }\SpecialCharTok{==} \StringTok{"SEA"} \SpecialCharTok{\textasciitilde{}} \StringTok{"OKC"}\NormalTok{,}
+         \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}}\NormalTok{ AWAY\_TEAM))}
+
+\CommentTok{\# load datasets pertaining to nba details on a per{-}game basis}
+\NormalTok{games           }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"dataset/nbagames/games.csv"}\NormalTok{)}
+\NormalTok{games\_details   }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"dataset/nbagames/games\_details.csv"}\NormalTok{)}
+
+\CommentTok{\# preprocess the data in the games dataset}
+\NormalTok{games }\SpecialCharTok{\%\textless{}\textgreater{}\%}
+  \CommentTok{\# remove a few unneeded variables from the dataset}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{GAME\_STATUS\_TEXT, }\SpecialCharTok{{-}}\NormalTok{HOME\_TEAM\_ID, }\SpecialCharTok{{-}}\NormalTok{VISITOR\_TEAM\_ID) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# make some ids shorter}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{TEAM\_ID\_home =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{str\_sub}\NormalTok{(TEAM\_ID\_home, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{)),}
+         \AttributeTok{TEAM\_ID\_away =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{str\_sub}\NormalTok{(TEAM\_ID\_away, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{)),}
+         \CommentTok{\# turn the home team win variable into a factor for later use}
+         \AttributeTok{HOME\_TEAM\_WINS =} \FunctionTok{factor}\NormalTok{(HOME\_TEAM\_WINS,}
+                                 \AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"No"}\NormalTok{,}\StringTok{"Yes"}\NormalTok{))) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# rename the variable for consistency\textquotesingle{}s sake}
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{WIN\_home =}\NormalTok{ HOME\_TEAM\_WINS)}
+
+\CommentTok{\# preprocess the data in the games details dataset}
+\NormalTok{games\_details }\SpecialCharTok{\%\textless{}\textgreater{}\%}
+  \CommentTok{\# remove a few unneeded variables from the dataset}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{(PLAYER\_ID}\SpecialCharTok{:}\NormalTok{MIN), }\SpecialCharTok{{-}}\NormalTok{OREB, }\SpecialCharTok{{-}}\NormalTok{DREB,}
+         \SpecialCharTok{{-}}\NormalTok{FG\_PCT, }\SpecialCharTok{{-}}\NormalTok{FG3\_PCT, }\SpecialCharTok{{-}}\NormalTok{FT\_PCT) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# make some ids shorter}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{TEAM\_ID =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{str\_sub}\NormalTok{(TEAM\_ID, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{)),}
+         \CommentTok{\# turn all NAs to 0s}
+         \FunctionTok{across}\NormalTok{(}\FunctionTok{everything}\NormalTok{(),}\SpecialCharTok{\textasciitilde{}}\FunctionTok{replace\_na}\NormalTok{(.,}\DecValTok{0}\NormalTok{)),}
+         \CommentTok{\# make sure no outdated abbreviations are used}
+         \AttributeTok{TEAM\_ABBREVIATION =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{         TEAM\_ABBREVIATION }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"NOH"}\NormalTok{, }\StringTok{"NOK"}\NormalTok{) }\SpecialCharTok{\textasciitilde{}} \StringTok{"NOP"}\NormalTok{,}
+\NormalTok{         TEAM\_ABBREVIATION }\SpecialCharTok{==} \StringTok{"NJN"} \SpecialCharTok{\textasciitilde{}} \StringTok{"BKN"}\NormalTok{,}
+\NormalTok{         TEAM\_ABBREVIATION }\SpecialCharTok{==} \StringTok{"SEA"} \SpecialCharTok{\textasciitilde{}} \StringTok{"OKC"}\NormalTok{,}
+         \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}}\NormalTok{ TEAM\_ABBREVIATION)) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# add the season column to the dataset for later use}
+  \FunctionTok{left\_join}\NormalTok{(games }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(GAME\_ID,SEASON),}
+            \AttributeTok{by=}\StringTok{"GAME\_ID"}\NormalTok{,}\AttributeTok{multiple=}\StringTok{"first"}\NormalTok{)}
+
+\NormalTok{shots }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{unite}\NormalTok{(SHOT\_INFO, }\FunctionTok{c}\NormalTok{(SHOT\_TYPE,SHOT\_MADE)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(SEASON\_2, SHOT\_INFO) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{COUNT =} \FunctionTok{n}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{RATIO\_3 =}\NormalTok{ COUNT }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(COUNT)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(}\FunctionTok{grepl}\NormalTok{(}\StringTok{"3"}\NormalTok{,SHOT\_INFO)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{SHOT\_INFO=}\FunctionTok{if\_else}\NormalTok{(}\FunctionTok{grepl}\NormalTok{(}\StringTok{"TRUE"}\NormalTok{,SHOT\_INFO),}\StringTok{"Made"}\NormalTok{,}\StringTok{"Missed"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(SEASON\_2, RATIO\_3,}
+         \AttributeTok{fill =}\NormalTok{ SHOT\_INFO, }\AttributeTok{label =} \FunctionTok{label\_percent}\NormalTok{(}\FloatTok{0.1}\NormalTok{)(RATIO\_3))) }\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position =} \StringTok{"stack"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_text}\NormalTok{(}\AttributeTok{position =} \StringTok{"stack"}\NormalTok{, }\AttributeTok{color =} \StringTok{"white"}\NormalTok{, }\AttributeTok{vjust =} \DecValTok{2}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{label\_percent}\NormalTok{()) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_brewer}\NormalTok{(}\AttributeTok{palette =} \StringTok{"Set1"}\NormalTok{, }\AttributeTok{direction =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\StringTok{"Season"}\NormalTok{,}\AttributeTok{y=}\StringTok{"3PT Field Goals to Total FGs"}\NormalTok{,}\AttributeTok{fill=}\StringTok{"Shot Result"}\NormalTok{,}
+       \AttributeTok{title=}\StringTok{"3{-}point field goals in the NBA over the past 20 seasons"}\NormalTok{,}
+       \AttributeTok{subtitle=}\StringTok{"3{-}point field goals over total}
+\StringTok{                 field goals between 2003 and 2022"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{45}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{))}
+
+\CommentTok{\# Calculate total shots made and attempted in each BASIC\_ZONE}
+\CommentTok{\# and calculate the probability of a shot being made in each BASIC\_ZONE.}
+\CommentTok{\# Finally, calculate the expected value of a shot in each BASIC\_ZONE.}
+\NormalTok{EV\_info }\OtherTok{\textless{}{-}}\NormalTok{ shots }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(SHOT\_MADE) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{(BASIC\_ZONE, SHOT\_TYPE, }\AttributeTok{name =} \StringTok{"TOT\_MADE"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{left\_join}\NormalTok{(}\FunctionTok{count}\NormalTok{(shots, BASIC\_ZONE, SHOT\_TYPE, }\AttributeTok{name =} \StringTok{"ATTEMPTS"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{PROB =}\NormalTok{ TOT\_MADE}\SpecialCharTok{/}\NormalTok{ATTEMPTS, }\AttributeTok{EV =}\NormalTok{ PROB}\SpecialCharTok{*}\NormalTok{SHOT\_TYPE) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(BASIC\_ZONE) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(ATTEMPTS }\SpecialCharTok{==} \FunctionTok{max}\NormalTok{(ATTEMPTS)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(BASIC\_ZONE,EV) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(EV))}
+
+\FunctionTok{kable}\NormalTok{(EV\_info, }\AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{linesep =} \StringTok{""}\NormalTok{,}
+      \AttributeTok{caption =} \StringTok{"Expected values of shots}
+\StringTok{                 taken from each area of the court"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Basic Zone"}\NormalTok{,}
+                    \StringTok{"EV"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \StringTok{"striped"}\NormalTok{,}
+                \AttributeTok{position =} \StringTok{"float\_right"}\NormalTok{,}
+                \AttributeTok{wraptable\_width =} \StringTok{"5.5cm"}\NormalTok{,}
+                \AttributeTok{stripe\_color =} \StringTok{"gray!30"}\NormalTok{)}
+
+\CommentTok{\# Determine which teams took the most}
+\CommentTok{\# statistically efficient shots on a season{-}per{-}season basis.}
+\NormalTok{analytical\_teams }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(SEASON\_2) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{EV\_AVG =} \FunctionTok{mean}\NormalTok{(EV\_AVG)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(SEASON\_2, EV\_AVG, }\AttributeTok{group =} \DecValTok{1}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{(}\AttributeTok{lwd =} \DecValTok{1}\NormalTok{, }\AttributeTok{color =} \StringTok{"steelblue"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size =} \DecValTok{3}\NormalTok{, }\AttributeTok{shape =} \DecValTok{21}\NormalTok{, }\AttributeTok{fill =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Season"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Expected points per shot"}\NormalTok{, }
+       \AttributeTok{title =} \StringTok{"EV Average per Season"}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{"League{-}wide expected shooting}
+\StringTok{                   efficiency between 2003 and 2022"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{45}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{))}
+
+\CommentTok{\# Determine the expected and actual win}
+\CommentTok{\# percentages for teams based on the EV statistic.}
+\CommentTok{\# The resulting teams\_percentages dataset}
+\CommentTok{\# summarizes the predictor{-}based win percentages.}
+\NormalTok{teams\_percentages }\OtherTok{\textless{}{-}}\NormalTok{ shots }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{left\_join}\NormalTok{(EV\_info) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(GAME\_ID,SEASON\_2,TEAM\_ID) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{TOTAL\_EV =} \FunctionTok{sum}\NormalTok{(EV)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{EXP\_RESULT=}\FunctionTok{if\_else}\NormalTok{(TOTAL\_EV}\SpecialCharTok{==}\FunctionTok{max}\NormalTok{(TOTAL\_EV),}\StringTok{"Win"}\NormalTok{,}\StringTok{"Loss"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{inner\_join}\NormalTok{(games\_details }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{group\_by}\NormalTok{(GAME\_ID,TEAM\_ID) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{summarize}\NormalTok{(}\AttributeTok{PTS=}\FunctionTok{sum}\NormalTok{(PTS)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{WIN\_REAL=}\FunctionTok{if\_else}\NormalTok{(PTS}\SpecialCharTok{==}\FunctionTok{max}\NormalTok{(PTS),}\StringTok{"Win"}\NormalTok{,}\StringTok{"Loss"}\NormalTok{))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{MOD\_FLAG=}\FunctionTok{if\_else}\NormalTok{(EXP\_RESULT}\SpecialCharTok{==}\NormalTok{WIN\_REAL,}\ConstantTok{TRUE}\NormalTok{,}\ConstantTok{FALSE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{left\_join}\NormalTok{(}\FunctionTok{distinct}\NormalTok{(shots }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(TEAM\_ID, TEAM\_NAME))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(SEASON\_2,TEAM\_NAME) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{MODEL\_PCT =} \FunctionTok{mean}\NormalTok{(EXP\_RESULT }\SpecialCharTok{==} \StringTok{"Win"}\NormalTok{),}
+            \AttributeTok{REAL\_PCT  =} \FunctionTok{mean}\NormalTok{(WIN\_REAL   }\SpecialCharTok{==} \StringTok{"Win"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(REAL\_PCT))}
+
+\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(teams\_percentages), }\AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{linesep =} \StringTok{""}\NormalTok{,}
+      \AttributeTok{caption =} \StringTok{"Predictor{-}based win ratios}
+\StringTok{                 vs. real win ratios for best}
+\StringTok{                 teams of the last 20 seasons"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Season"}\NormalTok{,}
+                    \StringTok{"Team Name"}\NormalTok{,}
+                    \StringTok{"EV{-}based win ratio"}\NormalTok{,}
+                    \StringTok{"Real win ratio"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"striped"}\NormalTok{,}\StringTok{"HOLD\_position"}\NormalTok{),}
+                \AttributeTok{stripe\_color =} \StringTok{"gray!30"}\NormalTok{)}
+
+\NormalTok{C\_half }\SpecialCharTok{+}\NormalTok{ shots }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{SHOT\_MADE=}\FunctionTok{if\_else}\NormalTok{(}\FunctionTok{grepl}\NormalTok{(}\StringTok{"TRUE"}\NormalTok{,SHOT\_MADE),}\StringTok{"Made"}\NormalTok{,}\StringTok{"Missed"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(LOC\_Y }\SpecialCharTok{\textless{}=} \DecValTok{47} \SpecialCharTok{\&}\NormalTok{ BASIC\_ZONE }\SpecialCharTok{!=} \StringTok{"Backcourt"} \SpecialCharTok{\&}\NormalTok{ TEAM\_ID }\SpecialCharTok{==} \DecValTok{44} \SpecialCharTok{\&}
+\NormalTok{         (SEASON\_2 }\SpecialCharTok{==} \StringTok{"2003{-}04"} \SpecialCharTok{|}\NormalTok{ SEASON\_2 }\SpecialCharTok{==} \StringTok{"2015{-}16"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(LOC\_X,LOC\_Y,}\AttributeTok{color=}\NormalTok{SHOT\_MADE),.,}\AttributeTok{alpha=}\FloatTok{0.3}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_color\_manual}\NormalTok{(}\AttributeTok{values =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#003da5"}\NormalTok{,}\StringTok{"\#ffc72c"}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{SEASON\_2) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Golden State Warriors shooting"}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{"Shot charts in 2003{-}04 vs. 2015{-}16"}\NormalTok{,}
+       \AttributeTok{color =} \StringTok{"Shot result"}\NormalTok{)}
+
+\CommentTok{\# Determine which teams took the most statistically efficient shots}
+\CommentTok{\# on a season{-}per{-}season basis.}
+\NormalTok{analytical\_teams }\OtherTok{\textless{}{-}}\NormalTok{ shots }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{left\_join}\NormalTok{(EV\_info) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(SEASON\_2,TEAM\_NAME) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{EV\_AVG =} \FunctionTok{mean}\NormalTok{(EV)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(EV\_AVG))}
+
+\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(analytical\_teams), }\AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{linesep =} \StringTok{""}\NormalTok{,}
+      \AttributeTok{caption =} \StringTok{"Teams that took}
+\StringTok{                 the most efficient shots on average"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Season"}\NormalTok{,}
+                    \StringTok{"Team Name"}\NormalTok{,}
+                    \StringTok{"EV AVG"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \StringTok{"striped"}\NormalTok{,}
+                \AttributeTok{position =} \StringTok{"float\_left"}\NormalTok{,}
+                \AttributeTok{wraptable\_width =} \StringTok{"7.15cm"}\NormalTok{,}
+                \AttributeTok{stripe\_color =} \StringTok{"gray!30"}\NormalTok{)}
+
+\NormalTok{C\_half }\SpecialCharTok{+}\NormalTok{ shots }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(LOC\_Y }\SpecialCharTok{\textless{}=} \DecValTok{47} \SpecialCharTok{\&}\NormalTok{ BASIC\_ZONE }\SpecialCharTok{!=} \StringTok{"Backcourt"} \SpecialCharTok{\&}\NormalTok{ TEAM\_ID }\SpecialCharTok{==} \DecValTok{45} \SpecialCharTok{\&}
+\NormalTok{         (SEASON\_2 }\SpecialCharTok{==} \StringTok{"2003{-}04"} \SpecialCharTok{|}\NormalTok{ SEASON\_2 }\SpecialCharTok{==} \StringTok{"2017{-}18"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{left\_join}\NormalTok{(EV\_info) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(LOC\_X,LOC\_Y,}\AttributeTok{color=}\NormalTok{EV,}\AttributeTok{shape=}\NormalTok{BASIC\_ZONE),.) }\SpecialCharTok{+}
+  \FunctionTok{scale\_color\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"\#a0a0a0"}\NormalTok{, }\AttributeTok{high=}\StringTok{"\#ce1141"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{SEASON\_2) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Houston Rockets shooting"}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{"Shot charts in 2003{-}04 vs. 2017{-}18"}\NormalTok{,}
+       \AttributeTok{color =} \StringTok{"Shot expected value"}\NormalTok{,}
+       \AttributeTok{shape =} \StringTok{"Shot area"}\NormalTok{)}
+
+\NormalTok{games\_details }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(GAME\_ID,TEAM\_ABBREVIATION) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{FGA=}\FunctionTok{sum}\NormalTok{(FGA), }\AttributeTok{FGM=}\FunctionTok{sum}\NormalTok{(FGM),}
+            \AttributeTok{PTS=}\FunctionTok{sum}\NormalTok{(PTS)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{WIN=}\FunctionTok{if\_else}\NormalTok{(PTS}\SpecialCharTok{==}\FunctionTok{max}\NormalTok{(PTS),}\StringTok{"Win"}\NormalTok{,}\StringTok{"Loss"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(FGA}\SpecialCharTok{!=}\DecValTok{0}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(FGA,FGM}\SpecialCharTok{/}\NormalTok{FGA,}\AttributeTok{color=}\NormalTok{WIN)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{label\_percent}\NormalTok{()) }\SpecialCharTok{+}
+  \FunctionTok{scale\_color\_brewer}\NormalTok{(}\AttributeTok{palette =} \StringTok{"Set2"}\NormalTok{, }\AttributeTok{direction =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\StringTok{"Field Goals Attempts"}\NormalTok{, }\AttributeTok{y=}\StringTok{"Shot Percentage"}\NormalTok{,}
+       \AttributeTok{color=}\StringTok{"Game Result"}\NormalTok{,}
+       \AttributeTok{title=}\StringTok{"Shot precision reliably predicts wins"}\NormalTok{,}
+       \AttributeTok{subtitle=}\StringTok{"Relationship between shot}
+\StringTok{                 precision and game results"}\NormalTok{)}
+
+\NormalTok{games\_details }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(GAME\_ID,TEAM\_ABBREVIATION) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{FG3A=}\FunctionTok{sum}\NormalTok{(FG3A), }\AttributeTok{FG3M=}\FunctionTok{sum}\NormalTok{(FG3M),}
+            \AttributeTok{PTS=}\FunctionTok{sum}\NormalTok{(PTS)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{WIN=}\FunctionTok{if\_else}\NormalTok{(PTS}\SpecialCharTok{==}\FunctionTok{max}\NormalTok{(PTS),}\StringTok{"Win"}\NormalTok{,}\StringTok{"Loss"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(FG3A}\SpecialCharTok{!=}\DecValTok{0}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(FG3A,FG3M}\SpecialCharTok{/}\NormalTok{FG3A,}\AttributeTok{color=}\NormalTok{WIN)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{label\_percent}\NormalTok{()) }\SpecialCharTok{+}
+  \FunctionTok{scale\_color\_brewer}\NormalTok{(}\AttributeTok{palette =} \StringTok{"Set2"}\NormalTok{, }\AttributeTok{direction =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\StringTok{"3PT Field Goals Attempts"}\NormalTok{, }\AttributeTok{y=}\StringTok{"3PT Percentage"}\NormalTok{,}
+       \AttributeTok{color=}\StringTok{"Game Result"}\NormalTok{,}
+       \AttributeTok{title=}\StringTok{"3PT shooting precision reliably predicts wins"}\NormalTok{,}
+       \AttributeTok{subtitle=}\StringTok{"Relationship between 3{-}point shot}
+\StringTok{                 precision and game results"}\NormalTok{)}
+
+\CommentTok{\# Prepare a dataset useful for modeling and prediction}
+\NormalTok{model\_ds }\OtherTok{\textless{}{-}}\NormalTok{ shots }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{left\_join}\NormalTok{(}\FunctionTok{distinct}\NormalTok{(games\_details }\SpecialCharTok{\%\textgreater{}\%}
+                      \FunctionTok{select}\NormalTok{(TEAM\_ID, TEAM\_ABBREVIATION))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{left\_join}\NormalTok{(EV\_info) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(GAME\_ID, SEASON\_2) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{EV\_home =} \FunctionTok{sum}\NormalTok{(EV }\SpecialCharTok{*}\NormalTok{ (HOME\_TEAM }\SpecialCharTok{==}\NormalTok{ TEAM\_ABBREVIATION)),}
+            \AttributeTok{EV\_away =} \FunctionTok{sum}\NormalTok{(EV }\SpecialCharTok{*}\NormalTok{ (AWAY\_TEAM }\SpecialCharTok{==}\NormalTok{ TEAM\_ABBREVIATION)),}
+            \AttributeTok{.groups =} \StringTok{"drop"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{inner\_join}\NormalTok{(games) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{GAME\_ID, }\SpecialCharTok{{-}}\NormalTok{SEASON\_2,}
+         \SpecialCharTok{{-}}\NormalTok{PTS\_home, }\SpecialCharTok{{-}}\NormalTok{PTS\_away)}
+
+\CommentTok{\# Split the data in training and testing based on the seasons}
+\NormalTok{train\_chrono }\OtherTok{\textless{}{-}}\NormalTok{ model\_ds }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(SEASON }\SpecialCharTok{\textless{}=} \DecValTok{2019}\NormalTok{)}
+\NormalTok{test\_chrono }\OtherTok{\textless{}{-}}\NormalTok{ model\_ds }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(SEASON }\SpecialCharTok{\textgreater{}} \DecValTok{2019}\NormalTok{)}
+
+\CommentTok{\# Set a tidymodels data recipe}
+\NormalTok{data\_recipe }\OtherTok{\textless{}{-}} \FunctionTok{recipe}\NormalTok{(WIN\_home }\SpecialCharTok{\textasciitilde{}}\NormalTok{ ., }\AttributeTok{data =}\NormalTok{ model\_ds) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{update\_role}\NormalTok{(GAME\_DATE\_EST, SEASON,}
+\NormalTok{              TEAM\_ID\_home, TEAM\_ID\_away,}
+              \AttributeTok{new\_role =} \StringTok{"ID"}\NormalTok{)}
+
+\CommentTok{\# Fit a logistic regression}
+\NormalTok{fit\_lr }\OtherTok{\textless{}{-}} \FunctionTok{workflow}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_recipe}\NormalTok{(data\_recipe) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_model}\NormalTok{(}\FunctionTok{logistic\_reg}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{fit}\NormalTok{(train\_chrono)}
+
+\CommentTok{\# Output model coefficients}
+\FunctionTok{kable}\NormalTok{(}\FunctionTok{tidy}\NormalTok{(fit\_lr), }\AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{linesep =} \StringTok{""}\NormalTok{,}
+      \AttributeTok{caption =} \StringTok{"Model coefficients of}
+\StringTok{                 logistic regression using all predictors"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Variable"}\NormalTok{,}
+                    \StringTok{"Coefficient"}\NormalTok{,}
+                    \StringTok{"Std. error"}\NormalTok{,}
+                    \StringTok{"Statistic"}\NormalTok{,}
+                    \StringTok{"p{-}value"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"striped"}\NormalTok{,}\StringTok{"HOLD\_position"}\NormalTok{),}
+                \AttributeTok{stripe\_color =} \StringTok{"gray!30"}\NormalTok{)}
+
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{123}\NormalTok{) }\CommentTok{\# set seed for tree models}
+
+\CommentTok{\# Fit a decision tree model}
+\NormalTok{fit\_dt }\OtherTok{\textless{}{-}} \FunctionTok{workflow}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_recipe}\NormalTok{(data\_recipe) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_model}\NormalTok{(}\FunctionTok{decision\_tree}\NormalTok{(}\AttributeTok{mode =} \StringTok{"classification"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{fit}\NormalTok{(train\_chrono)}
+
+\NormalTok{fit\_dt\_nofg }\OtherTok{\textless{}{-}} \FunctionTok{workflow}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_recipe}\NormalTok{(data\_recipe }\SpecialCharTok{\%\textgreater{}\%}
+             \FunctionTok{step\_rm}\NormalTok{(}\FunctionTok{all\_of}\NormalTok{(}\FunctionTok{starts\_with}\NormalTok{(}\StringTok{"FG"}\NormalTok{)))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_model}\NormalTok{(}\FunctionTok{decision\_tree}\NormalTok{(}\AttributeTok{mode =} \StringTok{"classification"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{fit}\NormalTok{(train\_chrono)}
+
+\CommentTok{\# Show a confusion matrix of performance of the logistic reg model}
+\NormalTok{test\_chrono }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(WIN\_home) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{predictions =}
+         \FunctionTok{predict}\NormalTok{(fit\_lr,test\_chrono, }\AttributeTok{type =} \StringTok{"class"}\NormalTok{)}\SpecialCharTok{$}\NormalTok{.pred\_class) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{conf\_mat}\NormalTok{(WIN\_home, predictions) }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  \{}\FunctionTok{kable}\NormalTok{(.}\SpecialCharTok{$}\NormalTok{table, }\AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{linesep =} \StringTok{""}\NormalTok{,}
+        \AttributeTok{caption =} \StringTok{"Logistic regression model confusion matrix"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \StringTok{"striped"}\NormalTok{,}
+                \AttributeTok{position =} \StringTok{"float\_right"}\NormalTok{,}
+                \AttributeTok{wraptable\_width =} \StringTok{"3.5cm"}\NormalTok{,}
+                \AttributeTok{stripe\_color =} \StringTok{"gray!30"}\NormalTok{)\}}
+
+\NormalTok{fit\_dt }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{extract\_fit\_engine}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{rpart.plot}\NormalTok{(}\AttributeTok{main=}\StringTok{"Decision tree plot for full model"}\NormalTok{,}\AttributeTok{roundint =} \ConstantTok{FALSE}\NormalTok{)}
+
+\CommentTok{\# Show a confusion matrix of performance of the decision tree model}
+\NormalTok{test\_chrono }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(WIN\_home) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{predictions =}
+         \FunctionTok{predict}\NormalTok{(fit\_dt, test\_chrono, }\AttributeTok{type =} \StringTok{"class"}\NormalTok{)}\SpecialCharTok{$}\NormalTok{.pred\_class) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{conf\_mat}\NormalTok{(WIN\_home, predictions) }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  \{}\FunctionTok{kable}\NormalTok{(.}\SpecialCharTok{$}\NormalTok{table, }\AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{linesep =} \StringTok{""}\NormalTok{,}
+        \AttributeTok{caption =} \StringTok{"Decision tree model confusion matrix"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \StringTok{"striped"}\NormalTok{,}
+                \AttributeTok{position =} \StringTok{"float\_left"}\NormalTok{,}
+                \AttributeTok{wraptable\_width =} \StringTok{"3.5cm"}\NormalTok{,}
+                \AttributeTok{stripe\_color =} \StringTok{"gray!30"}\NormalTok{)\}}
+
+\FunctionTok{extract\_fit\_engine}\NormalTok{(fit\_dt)}\SpecialCharTok{$}\NormalTok{variable.importance }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{tibble}\NormalTok{(}\AttributeTok{Variable =} \FunctionTok{names}\NormalTok{(.), }\AttributeTok{Importance =}\NormalTok{ .) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\FunctionTok{reorder}\NormalTok{(Variable, Importance),}
+\NormalTok{         Importance, }\AttributeTok{fill =}\NormalTok{ Variable)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{coord\_flip}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Feature"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Importance"}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{"Variable Importance"}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{"Full decision tree model fit"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill =} \StringTok{"none"}\NormalTok{)}
+
+\NormalTok{fit\_dt\_nofg }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{extract\_fit\_engine}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{rpart.plot}\NormalTok{(}\AttributeTok{main=}\StringTok{"Decision tree plot for model with no FGs"}\NormalTok{,}
+             \AttributeTok{roundint =} \ConstantTok{FALSE}\NormalTok{)}
+
+\FunctionTok{extract\_fit\_engine}\NormalTok{(fit\_dt\_nofg)}\SpecialCharTok{$}\NormalTok{variable.importance }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{tibble}\NormalTok{(}\AttributeTok{Variable =} \FunctionTok{names}\NormalTok{(.), }\AttributeTok{Importance =}\NormalTok{ .) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\FunctionTok{reorder}\NormalTok{(Variable, Importance),}
+\NormalTok{         Importance, }\AttributeTok{fill =}\NormalTok{ Variable)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{coord\_flip}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Feature"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Importance"}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{"Variable Importance"}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{"Decision tree model fit with no FGs"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill =} \StringTok{"none"}\NormalTok{)}
+
+\CommentTok{\# Function that performs v{-}fold cross{-}validation}
+\CommentTok{\# on pre{-}specified model fits}
+\CommentTok{\# and returns an array of model performance metrics}
+\NormalTok{vfoldcv\_fit }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(}\AttributeTok{vars\_to\_remove=}\ConstantTok{NULL}\NormalTok{, }\AttributeTok{recipe=}\NormalTok{data\_recipe,}
+                        \AttributeTok{train=}\NormalTok{train\_chrono, }\AttributeTok{folds=}\DecValTok{10}\NormalTok{, }\AttributeTok{seed=}\DecValTok{2023}\NormalTok{) \{}
+  \FunctionTok{set.seed}\NormalTok{(seed) }\CommentTok{\# set seed for reproducibility}
+  \CommentTok{\# Update recipe to remove specified variables}
+\NormalTok{  updated\_recipe }\OtherTok{\textless{}{-}}\NormalTok{ recipe }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{step\_rm}\NormalTok{(}\FunctionTok{all\_of}\NormalTok{(vars\_to\_remove)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{step\_normalize}\NormalTok{(}\FunctionTok{all\_predictors}\NormalTok{()) }\CommentTok{\# scale and center all predictors}
+  \CommentTok{\# Create a list of models}
+\NormalTok{  models }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\FunctionTok{logistic\_reg}\NormalTok{(), }\FunctionTok{decision\_tree}\NormalTok{(}\AttributeTok{mode=}\StringTok{"classification"}\NormalTok{))}
+  \CommentTok{\# Define the workflows for logistic regression and decision tree}
+\NormalTok{  workflows }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(models, }\ControlFlowTok{function}\NormalTok{(x) \{}
+    \FunctionTok{add\_recipe}\NormalTok{(}\FunctionTok{workflow}\NormalTok{(), updated\_recipe) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{add\_model}\NormalTok{(x)}
+\NormalTok{  \})}
+\NormalTok{  train\_folds }\OtherTok{\textless{}{-}} \FunctionTok{vfold\_cv}\NormalTok{(train, }\AttributeTok{v =}\NormalTok{ folds, }\AttributeTok{strata =}\NormalTok{ WIN\_home)}
+  \CommentTok{\# Fit the models}
+\NormalTok{  fits }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(workflows, }\ControlFlowTok{function}\NormalTok{(x) \{}
+    \FunctionTok{fit\_resamples}\NormalTok{(x, train\_folds,}
+                  \AttributeTok{metrics =} \FunctionTok{metric\_set}\NormalTok{(roc\_auc, f\_meas, kap),}
+                  \AttributeTok{control =} \FunctionTok{control\_resamples}\NormalTok{(}
+                    \AttributeTok{extract =}\NormalTok{ extract\_fit\_parsnip, }\AttributeTok{save\_pred =} \ConstantTok{TRUE}\NormalTok{))}
+\NormalTok{  \})}
+  \FunctionTok{names}\NormalTok{(fits) }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\StringTok{"Logistic\_Regression"}\NormalTok{,}\StringTok{"Decision\_Tree"}\NormalTok{)}
+
+  \CommentTok{\# Return model metrics}
+\NormalTok{  fits\_metrics }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(fits, collect\_metrics)}
+  \FunctionTok{names}\NormalTok{(fits\_metrics) }\OtherTok{\textless{}{-}} \FunctionTok{names}\NormalTok{(fits)}
+  \CommentTok{\# Return model predictions}
+\NormalTok{  fits\_pred }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(fits, collect\_predictions)}
+  \FunctionTok{names}\NormalTok{(fits\_pred) }\OtherTok{\textless{}{-}} \FunctionTok{names}\NormalTok{(fits)}
+  \CommentTok{\# Return logistic model coefficients across all folds}
+\NormalTok{  model\_coefs }\OtherTok{\textless{}{-}}\NormalTok{ fits}\SpecialCharTok{$}\NormalTok{Logistic\_Regression }\SpecialCharTok{\%\textgreater{}\%} 
+    \FunctionTok{select}\NormalTok{(id, .extracts) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# get id and .extracts}
+    \FunctionTok{unnest}\NormalTok{(}\AttributeTok{cols =}\NormalTok{ .extracts) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# unlist .extracts}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{coefs =} \FunctionTok{map}\NormalTok{(.extracts, tidy)) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# coeffs in their col}
+    \FunctionTok{unnest}\NormalTok{(coefs) }\CommentTok{\# get the coefficients for each fold}
+  
+\NormalTok{  object }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(fits\_metrics,fits\_pred,model\_coefs)}
+  \FunctionTok{names}\NormalTok{(object) }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\StringTok{"Fits\_Metrics"}\NormalTok{,}\StringTok{"Fits\_Predictions"}\NormalTok{,}
+                        \StringTok{"Logistic\_Model\_Coefficients"}\NormalTok{)}
+  \FunctionTok{return}\NormalTok{(object)}
+\NormalTok{\}}
+
+\NormalTok{a }\OtherTok{\textless{}{-}} \FunctionTok{vfoldcv\_fit}\NormalTok{()}
+\NormalTok{b }\OtherTok{\textless{}{-}} \FunctionTok{vfoldcv\_fit}\NormalTok{(}\FunctionTok{starts\_with}\NormalTok{(}\StringTok{"FG"}\NormalTok{))}
+
+\NormalTok{a}\SpecialCharTok{$}\NormalTok{Logistic\_Model\_Coefficients }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(term }\SpecialCharTok{!=} \StringTok{"(Intercept)"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(id, term, estimate, std.error) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(term) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{avg\_estimate =} \FunctionTok{mean}\NormalTok{(estimate)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(id, estimate, }\AttributeTok{fill =}\NormalTok{ term, }\AttributeTok{color =}\NormalTok{ term)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_hline}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{yintercept =}\NormalTok{ avg\_estimate), }\AttributeTok{linetype =} \StringTok{"dashed"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size =} \DecValTok{3}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_errorbar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{ymin =}\NormalTok{ estimate }\SpecialCharTok{{-}} \DecValTok{2}\SpecialCharTok{*}\NormalTok{std.error,}
+                    \AttributeTok{ymax =}\NormalTok{ estimate }\SpecialCharTok{+} \DecValTok{2}\SpecialCharTok{*}\NormalTok{std.error),}
+                \AttributeTok{width =} \FloatTok{0.1}\NormalTok{, }\AttributeTok{lwd =} \FloatTok{1.2}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{term, }\AttributeTok{scales =} \StringTok{"free\_y"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"CV Folds"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Estimate ± 95\% CI"}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{"Regression Coefficients ± 95\% CI for 10{-}fold CV"}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{"Dashed line = average coefficient estimate}
+\StringTok{                   over 10 CV folds per predictor"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill =} \StringTok{"none"}\NormalTok{, }\AttributeTok{color =} \StringTok{"none"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{60}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{, }\AttributeTok{vjust =} \FloatTok{1.1}\NormalTok{),}
+        \AttributeTok{axis.text.y =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{12}\NormalTok{))}
+
+\FunctionTok{bind\_rows}\NormalTok{(a}\SpecialCharTok{$}\NormalTok{Fits\_Metrics}\SpecialCharTok{$}\NormalTok{Logistic\_Regression }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"Full Logistic Regression"}\NormalTok{),}
+\NormalTok{          a}\SpecialCharTok{$}\NormalTok{Fits\_Metrics}\SpecialCharTok{$}\NormalTok{Decision\_Tree       }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"Full Decision Tree"}\NormalTok{),}
+\NormalTok{          b}\SpecialCharTok{$}\NormalTok{Fits\_Metrics}\SpecialCharTok{$}\NormalTok{Logistic\_Regression }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"No FG Logistic Regression"}\NormalTok{),}
+\NormalTok{          b}\SpecialCharTok{$}\NormalTok{Fits\_Metrics}\SpecialCharTok{$}\NormalTok{Decision\_Tree       }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"No FG Decision Tree"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{.metric =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    .metric }\SpecialCharTok{==} \StringTok{"f\_meas"}  \SpecialCharTok{\textasciitilde{}} \StringTok{"F{-}measure"}\NormalTok{,}
+\NormalTok{    .metric }\SpecialCharTok{==} \StringTok{"kap"}     \SpecialCharTok{\textasciitilde{}} \StringTok{"Cohen\textquotesingle{}s Kappa"}\NormalTok{,}
+\NormalTok{    .metric }\SpecialCharTok{==} \StringTok{"roc\_auc"} \SpecialCharTok{\textasciitilde{}} \StringTok{"ROC AUC"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(.metric, mean, }\AttributeTok{fill =}\NormalTok{ Model)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{, }\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Metric"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Mean Value"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"Model"}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{"Model Metrics Comparison"}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{"Comparison of model metrics}
+\StringTok{                   for our 4 different models"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{, }\AttributeTok{vjust =} \FloatTok{2.5}\NormalTok{))}
+
+\FunctionTok{bind\_rows}\NormalTok{(}\FunctionTok{roc\_curve}\NormalTok{(a}\SpecialCharTok{$}\NormalTok{Fits\_Predictions}\SpecialCharTok{$}\NormalTok{Logistic\_Regression,}
+\NormalTok{                    WIN\_home, .pred\_Yes, }\AttributeTok{event\_level =} \StringTok{"second"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+           \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"Full Logistic Regression"}\NormalTok{),}
+          \FunctionTok{roc\_curve}\NormalTok{(a}\SpecialCharTok{$}\NormalTok{Fits\_Predictions}\SpecialCharTok{$}\NormalTok{Decision\_Tree,}
+\NormalTok{                    WIN\_home, .pred\_Yes, }\AttributeTok{event\_level =} \StringTok{"second"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+           \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"Full Decision Tree"}\NormalTok{),}
+          \FunctionTok{roc\_curve}\NormalTok{(b}\SpecialCharTok{$}\NormalTok{Fits\_Predictions}\SpecialCharTok{$}\NormalTok{Logistic\_Regression,}
+\NormalTok{                    WIN\_home, .pred\_Yes, }\AttributeTok{event\_level =} \StringTok{"second"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+           \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"No FG Logistic Regression"}\NormalTok{),}
+          \FunctionTok{roc\_curve}\NormalTok{(b}\SpecialCharTok{$}\NormalTok{Fits\_Predictions}\SpecialCharTok{$}\NormalTok{Decision\_Tree,}
+\NormalTok{                    WIN\_home, .pred\_Yes, }\AttributeTok{event\_level =} \StringTok{"second"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+           \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Model =} \StringTok{"No FG Decision Tree"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ specificity, sensitivity, }\AttributeTok{color =}\NormalTok{ Model)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{(}\AttributeTok{lwd =} \FloatTok{1.5}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_segment}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{0}\NormalTok{,}\AttributeTok{xend=}\DecValTok{1}\NormalTok{,}\AttributeTok{yend=}\DecValTok{1}\NormalTok{),}\AttributeTok{linetype=}\StringTok{"dashed"}\NormalTok{,}\AttributeTok{col=}\StringTok{"black"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{coord\_equal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"False Positive Rate"}\NormalTok{, }\AttributeTok{y =} \StringTok{"True Positive Rate"}\NormalTok{, }
+       \AttributeTok{title =} \StringTok{"ROC Curves"}\NormalTok{, }
+       \AttributeTok{subtitle =} \StringTok{"Comparison of ROC curves for our 4 different models"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}

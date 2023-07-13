@@ -1,0 +1,1534 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  5 JUL 2023 19:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Mazzarelli_NBA_analytics_thesis_printing.tex
+(./Mazzarelli_NBA_analytics_thesis_printing.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article
+.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen141
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+) (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count271
+)
+\MT@toks=\toks24
+\MT@tempbox=\box53
+\MT@count=\count272
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks25
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen150
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count273
+(/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 902.
+LaTeX Info: Redefining \lslig on input line 902.
+\MT@outer@space=\skip53
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+(/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+)) (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+(/usr/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (/usr/share/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2022/06/12 v2.14 Predefined colors according to SVG 1.1 (UK)
+) (/usr/share/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2022/06/12 v2.14 Predefined colors according to Unix/X11 (UK)
+)) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count274
+\Gm@cntv=\count275
+\c@Gm@tempcnt=\count276
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks26
+) (/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count277
+\FV@InFile=\read2
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count278
+\FV@StepNumber=\count279
+\FV@OutFile=\write3
+) (/usr/share/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip54
+\fb@frw=\dimen159
+\fb@frh=\dimen160
+\FrameRule=\dimen161
+\FrameSep=\dimen162
+) (/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count280
+\LTcapwidth=\dimen163
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@gbox=\box59
+\LT@cols=\count281
+\LT@rows=\count282
+\c@LT@tables=\count283
+\c@LT@chunks=\count284
+\LT@p@ftn=\toks27
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen164
+\lightrulewidth=\dimen165
+\cmidrulewidth=\dimen166
+\belowrulesep=\dimen167
+\belowbottomsep=\dimen168
+\aboverulesep=\dimen169
+\abovetopsep=\dimen170
+\cmidrulesep=\dimen171
+\cmidrulekern=\dimen172
+\defaultaddspace=\dimen173
+\@cmidla=\count285
+\@cmidlb=\count286
+\@aboverulesep=\dimen174
+\@belowrulesep=\dimen175
+\@thisruleclass=\count287
+\@lastruleclass=\count288
+\@thisrulewidth=\dimen176
+) (/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen177
+\ar@mcellbox=\box60
+\extrarowheight=\dimen178
+\NC@list=\toks28
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box61
+) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count289
+\calc@Bcount=\count290
+\calc@Adimen=\dimen179
+\calc@Bdimen=\dimen180
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count291
+\calc@Cskip=\skip63
+) (/usr/share/texmf-dist/tex/latex/footnotehyper/footnotehyper.sty
+Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
+\FNH@notes=\box62
+\FNH@width=\dimen181
+\FNH@toks=\toks29
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen182
+\Gin@req@width=\dimen183
+)
+\cslhangindent=\skip64
+\csllabelwidth=\skip65
+\cslentryspacingunit=\skip66
+(/usr/share/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has section divisions on input line 50.
+
+Package tocbibind Note: Using section or other style headings.
+
+) (/usr/share/texmf-dist/tex/latex/newtx/newtxtext.sty
+Package: newtxtext 2022/02/28 v1.71(Michael Sharpe) latex and unicode latex sup
+port for TeXGyreTermesX
+
+`newtxtext' v1.71, 2022/02/28 Text macros taking advantage of TeXGyre Termes an
+d its extensions (msharpe) (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/t
+ex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
+)
+\XKV@depth=\count292
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texmf-dis
+t/tex/generic/xstring/xstring.tex
+\integerpart=\count293
+\decimalpart=\count294
+)
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+LaTeX Font Info:    Setting ntxLF sub-encoding to TS1/0 on input line 21.
+LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 21.
+LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 21.
+LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 21.
+(/usr/share/texmf-dist/tex/generic/kastrup/binhex.tex)
+\ntx@tmpcnta=\count295
+\ntx@cnt=\count296
+ntx@otftextfalse
+(/usr/share/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+LaTeX Info: Redefining \oldstylenums on input line 657.
+) (/usr/share/texmf-dist/tex/latex/newtx/newtxmath.sty
+Package: newtxmath 2022/01/16 v1.71
+
+`newtxmath' v1.71, 2022/01/16 Math macros based originally on txfonts (msharpe)
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texmf-dist/tex/latex/oberdiek/centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count297
+(/usr/share/texmf-dist/tex/generic/kastrup/binhex.tex)
+\tx@Isdigit=\count298
+\tx@IsAlNum=\count299
+\tx@tA=\toks32
+\tx@tB=\toks33
+\tx@su=\read3
+amsthm NOT loaded
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> OT1/minntx/m/n on input line 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/minntx/m/n on input line 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/minntx/m/n --> OT1/minntx/b/n on input line 377.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 383.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/qhv/m/n on input line 383.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> T1/qhv/m/n on input line 383.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 384.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> OT1/minntx/m/it on input line 384.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> OT1/minntx/m/it on input line 384.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 385.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/ntxtt/m/n on input line 385.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/ntxtt/m/n on input line 385.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> OT1/minntx/b/n on input line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/minntx/b/n on input line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/minntx/m/it --> OT1/minntx/b/it on input line 388.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/qhv/m/n --> T1/qhv/b/n on input line 389.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/ntxtt/m/n --> T1/ntxtt/b/n on input line 390.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 491.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/lmm/m/it --> OML/ntxmi/m/it on input line 491.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/lmm/b/it --> OML/ntxmi/m/it on input line 491.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 492.
+\symlettersA=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 547.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 549.
+Now handling font encoding LMS ...
+... no UTF-8 mapping file for font encoding LMS
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 568.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> LMS/ntxsy/m/n on input line 568.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> LMS/ntxsy/m/n on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 569.
+\symAMSm=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 594.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 615.
+Now handling font encoding LMX ...
+... no UTF-8 mapping file for font encoding LMX
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 628.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 6
+28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 628.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 628
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> LMX/ntxexx/m/n on input line 628.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 629.
+\symlargesymbolsTXA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 643.
+\tx@sbptoks=\toks34
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 866.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 867.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 869.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 870.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 871.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 872.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 874.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 878.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 879.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 950.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 951.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 2020.
+LaTeX Info: Redefining \Bbbk on input line 2810.
+LaTeX Info: Redefining \not on input line 2959.
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count300
+\float@exts=\toks35
+\float@box=\box63
+\@float@everytoks=\toks36
+\@floatcapt=\box64
+) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip67
+\f@nch@O@elh=\skip68
+\f@nch@O@erh=\skip69
+\f@nch@O@olh=\skip70
+\f@nch@O@orh=\skip71
+\f@nch@O@elf=\skip72
+\f@nch@O@erf=\skip73
+\f@nch@O@olf=\skip74
+\f@nch@O@orf=\skip75
+) (/usr/share/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen184
+\captionmargin=\dimen185
+\caption@leftmargin=\dimen186
+\caption@rightmargin=\dimen187
+\caption@width=\dimen188
+\caption@indent=\dimen189
+\caption@parindent=\dimen190
+\caption@hangindent=\dimen191
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count301
+\c@continuedfloat=\count302
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+\c@KVtest=\count303
+\sf@farskip=\skip76
+\sf@captopadj=\dimen192
+\sf@capskip=\skip77
+\sf@nearskip=\skip78
+\c@subfigure=\count304
+\c@subfigure@save=\count305
+\c@lofdepth=\count306
+\c@subtable=\count307
+\c@subtable@save=\count308
+\c@lotdepth=\count309
+\sf@top=\skip79
+\sf@bottom=\skip80
+) (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip81
+\multirow@cntb=\count310
+\multirow@dima=\skip82
+\bigstrutjot=\dimen193
+) (/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen194
+\WF@size=\dimen195
+\c@WF@wrappedlines=\count311
+\WF@box=\box65
+\WF@everypar=\toks37
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks38
+\minrowclearance=\skip83
+\rownum=\count312
+) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (/usr/share/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box66
+\sift@deathcycles=\count313
+\@vwid@loff=\dimen196
+\@vwid@roff=\dimen197
+)
+\c@taburow=\count314
+\tabu@nbcols=\count315
+\tabu@cnt=\count316
+\tabu@Xcol=\count317
+\tabu@alloc=\count318
+\tabu@nested=\count319
+\tabu@target=\dimen198
+\tabu@spreadtarget=\dimen199
+\tabu@naturalX=\dimen256
+\tabucolX=\dimen257
+\tabu@Xsum=\dimen258
+\extrarowdepth=\dimen259
+\abovetabulinesep=\dimen260
+\belowtabulinesep=\dimen261
+\tabustrutrule=\dimen262
+\tabu@thebody=\toks39
+\tabu@footnotes=\toks40
+\tabu@box=\box67
+\tabu@arstrutbox=\box68
+\tabu@hleads=\box69
+\tabu@vleads=\box70
+\tabu@cellskip=\skip84
+) (/usr/share/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box71
+) (/usr/share/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(/usr/share/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip85
+) (/usr/share/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box72
+\UL@hyphenbox=\box73
+\UL@skip=\skip86
+\UL@hook=\toks41
+\UL@height=\dimen263
+\UL@pe=\count320
+\UL@pixel=\dimen264
+\ULC@box=\box74
+Package: ulem 2019/11/18
+\ULdepth=\dimen265
+) (/usr/share/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen266
+\c@nlinenum=\count321
+\TeXr@lab=\toks42
+) (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count322
+)
+\@linkdim=\dimen267
+\Hy@linkcounter=\count323
+\Hy@pagecounter=\count324
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count325
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count326
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen268
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count327
+\Field@Width=\dimen269
+\Fld@charsize=\dimen270
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count328
+\c@Item=\count329
+\c@Hfootnote=\count330
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count331
+\c@bookmark@seq@number=\count332
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip87
+) (/usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count333
+)) (/usr/share/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 193.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
+ 206.
+(/usr/share/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
+File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
+)
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 206.
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count334
+\l__pdf_internal_box=\box75
+) (./Mazzarelli_NBA_analytics_thesis_printing.aux)
+\openout1 = `Mazzarelli_NBA_analytics_thesis_printing.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 206.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
+ 206.
+(/usr/share/texmf-dist/tex/latex/newtx/omlntxmi.fd
+File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
+)
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 206.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
+206.
+(/usr/share/texmf-dist/tex/latex/newtx/untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 206.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
+ 206.
+(/usr/share/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 206.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
+e 206.
+(/usr/share/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Info: Command `\dddot' is already robust on input line 206.
+LaTeX Info: Command `\ddddot' is already robust on input line 206.
+LaTeX Info: Redefining \microtypecontext on input line 206.
+Package microtype Info: Applying patch `item' on input line 206.
+Package microtype Info: Applying patch `toc' on input line 206.
+Package microtype Info: Applying patch `eqnum' on input line 206.
+Package microtype Info: Applying patch `footnote' on input line 206.
+Package microtype Info: Applying patch `verbatim' on input line 206.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 206.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/share/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+) (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count335
+\scratchdimen=\dimen271
+\scratchbox=\box76
+\nofMPsegments=\count336
+\nofMParguments=\count337
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count338
+\MPscratchDim=\dimen272
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
+\everyMPtoPDFconversion=\toks44
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@mv@tabular=\count341
+\c@mv@boldtabular=\count342
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 206.
+<./images/unibo-logo.pdf, id=4, 177.66376pt x 82.3075pt>
+File: ./images/unibo-logo.pdf Graphic file (type pdf)
+<use ./images/unibo-logo.pdf>
+Package pdftex.def Info: ./images/unibo-logo.pdf  used on input line 212.
+(pdftex.def)             Requested size: 177.66873pt x 82.30978pt.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 14.4pt on input line 216.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
+(Font)              scaled to size 14.4pt on input line 216.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/ntxtlf/m/sc/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 17.28pt on input line 217.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
+(Font)              scaled to size 17.28pt on input line 217.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 20.74pt on input line 222.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 20.74pt on input line 222.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 226.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
+/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx
+/ntx-ec-tlf.enc} <./images/unibo-logo.pdf>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 17.28pt on input line 244.
+(./Mazzarelli_NBA_analytics_thesis_printing.toc
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 1.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
+e 4.
+(/usr/share/texmf-dist/tex/latex/newtx/ot1minntx.fd
+File: ot1minntx.fd 2022/01/20 v1.0 font definition file for OT1/minntx
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
+4.
+(/usr/share/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
+4.
+(/usr/share/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
+4.
+(/usr/share/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+))
+\tf@toc=\write4
+\openout4 = `Mazzarelli_NBA_analytics_thesis_printing.toc'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.247 \newpage
+               [1]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 254.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2]
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
+266.
+(/usr/share/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 12.0pt on input line 266.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5]
+<latex/plotspng/plot_1.png, id=106, 1927.2pt x 1104.125pt>
+File: latex/plotspng/plot_1.png Graphic file (type png)
+<use latex/plotspng/plot_1.png>
+Package pdftex.def Info: latex/plotspng/plot_1.png  used on input line 393.
+(pdftex.def)             Requested size: 455.2446pt x 260.81721pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6]
+Overfull \hbox (5.67786pt too wide) in paragraph at lines 410--423
+ [][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7 <./latex/plotspng/plot_1.png>]
+<latex/plotspng/plot_2.png, id=126, 2007.5pt x 1003.75pt>
+File: latex/plotspng/plot_2.png Graphic file (type png)
+<use latex/plotspng/plot_2.png>
+Package pdftex.def Info: latex/plotspng/plot_2.png  used on input line 433.
+(pdftex.def)             Requested size: 455.22131pt x 227.61066pt.
+<latex/plotspng/plot_3.png, id=130, 2007.5pt x 1003.75pt>
+File: latex/plotspng/plot_3.png Graphic file (type png)
+<use latex/plotspng/plot_3.png>
+Package pdftex.def Info: latex/plotspng/plot_3.png  used on input line 464.
+(pdftex.def)             Requested size: 455.22131pt x 227.61066pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8 <./latex/plotspng/plot_2.png>]
+Overfull \hbox (1.41496pt too wide) in paragraph at lines 478--490
+ [][] 
+ []
+
+<latex/plotspng/plot_4.png, id=143, 2007.5pt x 903.375pt>
+File: latex/plotspng/plot_4.png Graphic file (type png)
+<use latex/plotspng/plot_4.png>
+Package pdftex.def Info: latex/plotspng/plot_4.png  used on input line 498.
+(pdftex.def)             Requested size: 455.22131pt x 204.8496pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9 <./latex/plotspng/plot_3.png>]
+<latex/plotspng/plot_5.png, id=155, 1204.5pt x 702.625pt>
+File: latex/plotspng/plot_5.png Graphic file (type png)
+<use latex/plotspng/plot_5.png>
+Package pdftex.def Info: latex/plotspng/plot_5.png  used on input line 509.
+(pdftex.def)             Requested size: 223.06793pt x 130.12296pt.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 509.
+<latex/plotspng/plot_6.png, id=156, 1204.5pt x 702.625pt>
+File: latex/plotspng/plot_6.png Graphic file (type png)
+<use latex/plotspng/plot_6.png>
+Package pdftex.def Info: latex/plotspng/plot_6.png  used on input line 509.
+(pdftex.def)             Requested size: 223.06793pt x 130.12296pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10 <./latex/plotspng/plot_4.png> <./latex/plotspng/plot_5.png> <./latex/plotsp
+ng/plot_6.png>]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input lin
+e 538.
+(/usr/share/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
+)
+LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 538.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 12.0pt on input line 538.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf-
+dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
+Overfull \hbox (1.81537pt too wide) in paragraph at lines 630--638
+ [][] 
+ []
+
+<latex/plotspng/plot_7.png, id=209, 2007.5pt x 903.375pt>
+File: latex/plotspng/plot_7.png Graphic file (type png)
+<use latex/plotspng/plot_7.png>
+Package pdftex.def Info: latex/plotspng/plot_7.png  used on input line 646.
+(pdftex.def)             Requested size: 455.22131pt x 204.8496pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14 <./latex/plotspng/plot_7.png>]
+<latex/plotspng/plot_8.png, id=223, 1606.0pt x 803.0pt>
+File: latex/plotspng/plot_8.png Graphic file (type png)
+<use latex/plotspng/plot_8.png>
+Package pdftex.def Info: latex/plotspng/plot_8.png  used on input line 675.
+(pdftex.def)             Requested size: 455.2397pt x 227.61984pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15 <./latex/plotspng/plot_8.png>]
+<latex/plotspng/plot_9.png, id=239, 2208.25pt x 1104.125pt>
+File: latex/plotspng/plot_9.png Graphic file (type png)
+<use latex/plotspng/plot_9.png>
+Package pdftex.def Info: latex/plotspng/plot_9.png  used on input line 688.
+(pdftex.def)             Requested size: 455.22131pt x 227.61066pt.
+<latex/plotspng/plot_10.png, id=242, 1606.0pt x 803.0pt>
+File: latex/plotspng/plot_10.png Graphic file (type png)
+<use latex/plotspng/plot_10.png>
+Package pdftex.def Info: latex/plotspng/plot_10.png  used on input line 699.
+(pdftex.def)             Requested size: 455.2397pt x 227.61984pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16 <./latex/plotspng/plot_9.png> <./latex/plotspng/plot_10.png>]
+<latex/plotspng/plot_11.png, id=252, 1606.0pt x 903.375pt>
+File: latex/plotspng/plot_11.png Graphic file (type png)
+<use latex/plotspng/plot_11.png>
+Package pdftex.def Info: latex/plotspng/plot_11.png  used on input line 713.
+(pdftex.def)             Requested size: 455.2397pt x 256.07233pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17 <./latex/plotspng/plot_11.png>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 733.
+<latex/plotspng/plot_12.png, id=265, 1606.0pt x 803.0pt>
+File: latex/plotspng/plot_12.png Graphic file (type png)
+<use latex/plotspng/plot_12.png>
+Package pdftex.def Info: latex/plotspng/plot_12.png  used on input line 740.
+(pdftex.def)             Requested size: 455.2397pt x 227.61984pt.
+<latex/plotspng/plot_13.png, id=267, 1204.5pt x 803.0pt>
+File: latex/plotspng/plot_13.png Graphic file (type png)
+<use latex/plotspng/plot_13.png>
+Package pdftex.def Info: latex/plotspng/plot_13.png  used on input line 751.
+(pdftex.def)             Requested size: 455.25195pt x 303.5013pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18 <./latex/plotspng/plot_12.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19 <./latex/plotspng/plot_13.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23] (./Mazzarelli_NBA_analytics_thesis_printing.lof)
+\tf@lof=\write5
+\openout5 = `Mazzarelli_NBA_analytics_thesis_printing.lof'.
+
+(./Mazzarelli_NBA_analytics_thesis_printing.lot)
+\tf@lot=\write6
+\openout6 = `Mazzarelli_NBA_analytics_thesis_printing.lot'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 9
+31.
+(/usr/share/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <12> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 931.
+LaTeX Font Info:    Font shape `T1/ntxtt/b/it' in size <12> not available
+(Font)              Font shape `T1/txtt/bx/it' tried instead on input line 931.
+
+LaTeX Font Info:    Font shape `T1/txtt/bx/it' in size <12> not available
+(Font)              Font shape `T1/txtt/bx/sl' tried instead on input line 931.
+
+LaTeX Font Info:    Font shape `T1/ntxtt/m/it' in size <12> not available
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 933.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtt on input line
+ 1021.
+(/usr/share/texmf-dist/tex/latex/newtx/ts1ntxtt.fd
+File: ts1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Trying to load font information for TS1+txtt on input line 
+1021.
+(/usr/share/texmf-dist/tex/latex/txfonts/ts1txtt.fd
+File: ts1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `TS1/ntxtt/m/it' in size <12> not available
+(Font)              Font shape `TS1/txtt/m/sl' tried instead on input line 1021
+.
+LaTeX Font Info:    Font shape `TS1/ntxtt/m/n' will be
+(Font)              scaled to size 12.0pt on input line 1379.
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35]
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1427
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37] (./Mazzarelli_NBA_analytics_thesis_printing.aux) ) 
+Here is how much of TeX's memory you used:
+ 21755 strings out of 477985
+ 344719 string characters out of 5840058
+ 1915388 words of memory out of 5000000
+ 41221 multiletter control sequences out of 15000+600000
+ 583545 words of font info for 177 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 85i,12n,133p,1115b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/f
+onts/type1/public/newtx/NewTXMI.pfb></usr/share/texmf-dist/fonts/type1/public/t
+ex-gyre/qtmr.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb><
+/usr/share/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/share/texmf-d
+ist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/txfonts/t1xtt.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/tcxtt.p
+fb></usr/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texmf
+-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></us
+r/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texmf-dist/fon
+ts/type1/public/newtx/ztmri.pfb>
+Output written on Mazzarelli_NBA_analytics_thesis_printing.pdf (38 pages, 21551
+86 bytes).
+PDF statistics:
+ 594 PDF objects out of 1000 (max. 8388607)
+ 493 compressed objects within 5 object streams
+ 134 named destinations out of 1000 (max. 500000)
+ 30959 words of extra memory for PDF output out of 35830 (max. 10000000)
+
